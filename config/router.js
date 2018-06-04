@@ -7,14 +7,20 @@ const pictures = require('../controllers/pictures');
 
 router.get('/', (req, res) => res.render('home', { isHomepage: true }));
 
-router.route('/register')
-  .get(registrations.new)
-  .post(registrations.create);
+router.route('/hairdresser/login')
+  .get(sessions.new)
+  .post(sessions.create);
+
+router.route('/client/login')
+  .get(sessions.new)
+  .post(sessions.create);
 
 // router.route('/login')
-//   .get(sessions.new)
-//   .post(sessions.create);
+// .get(registrations.new)
+// .post(registrations.create);
 //
+// .get(registrations.new)
+// .post(registrations.create);
 //
 // router.route('/logout')
 //   .get(sessions.delete);
