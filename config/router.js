@@ -17,22 +17,20 @@ router.route('/register')
 
 router.route('/logout')
   .get(sessions.delete);
-//
+
 router.route('/hair')
   .get(portfolio.index)
   .post(portfolio.create);
-// router.route('/pictures/new')
-//   .get(pictures.new);
-// router.route('/pictures/:id')
-//   .get(pictures.show)
-//   .put(pictures.update)
-//   .delete(pictures.delete);
-// router.route('/pictures/:id/edit')
-//   .get(pictures.edit);
-//
-// router.route('/pictures/:id/comment')
-//   .post(pictures.createComment);
+router.route('/hair/new')
+  .get(portfolio.new);
+router.route('/hair/:id')
+  .get(portfolio.show)
+  .put(portfolio.update)
+  .delete(portfolio.delete);
+router.route('/hair/:id/edit')
+  .get(portfolio.edit);
 
-
+router.route('/hair/:id/comment')
+  .post(portfolio.createComment);
 
 module.exports = router;
