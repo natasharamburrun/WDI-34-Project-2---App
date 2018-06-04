@@ -1,4 +1,5 @@
 const express = require('express');
+const morgan = require('morgan');
 const ejsLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
@@ -11,10 +12,8 @@ const hairdresser = require('./models/hairdresser');
 const { port, dbURI } = require('./config/environment');
 
 mongoose.connect(dbURI);
-
 //
 // const databaseURI ='mongodb://localhost/hair-app';
-
 //
 // app.get('/', (req, res)=> res.send('<h1>Hello World!</h1>'));
 
@@ -24,10 +23,32 @@ app.set('views', `${__dirname}/views`);
 
 app.use(ejsLayouts);
 
+app.use(morgan('dev'));
+
 app.use(express.static(`${__dirname}/public`));
 
 // setup bodyParser to handle Post request
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(session({
+  secret: process.env.SESSION_SECRET || 'ssh it\'s a secret',
+  resave: false,
+  saveUninitialized: false
+}));
+app.use((req, res, next) => {
+  if(!req.session.userId) return next();
+  console.log('session middleware');
+  console.log(req.session);
+  hairdresser
+    .findById(req.session.userId)
+    .populate({path: 'pictures', populate: {path: 'creator'}})
+    .exec()
+    .then((user) =>{
+      res.locals.user = user;
+      res.locals.isLoggedIn = true;
+      next();
+    });
+});
 
 app.use(methodOverride((req)=>{
   if (req.body && typeof req.body === 'object' && '_method' in req.body) {
@@ -38,21 +59,11 @@ app.use(methodOverride((req)=>{
   }
 }));
 
-
 //handle a request
-app.get('/',(req, res) => res.render('home', {
-  isHomepage: true
-}));
-
-// app.get('/hair', (req, res) => res.render('hair', {
-//   title: 'Hairdressers',
-//   products: [{
-//     name: 'Celine',
-//     image: 'https://www.celine.com'
-//   }]
+// app.get('/',(req, res) => res.render('home', {
+//   isHomepage: true
 // }));
 
-app.use(router); // MUST BE PLACED JUST BEFORE app.listen
+app.use(router);
 
-//listen out of the incoming requests on PORT 4000
-app.listen(4000, ()=> console.log('Express is listening to port 4000'));
+app.listen(port, ()=> console.log(`Express is listening to port ${port}`));

@@ -7,8 +7,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
   <link href="https://fonts.googleapis.com/css?family=Antic+Didone" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
-  <script src="js/app.js" charset="utf-8"></script>
+  <script src="./app.js" charset="utf-8"></script>
 </head>
+
 <body>
   <%- include ./partials/_navbar %>
 
@@ -24,13 +25,13 @@
         </div>
       </div>
     </section>
-    <!-- <% } else { %> -->
-      <!-- <section class="section">
+    <% } else { %>
+      <section class="section">
     <div class="container">
       <%- body %>
     </div>
-      </section> -->
-      <!-- <% } %> --> 
+      </section>
+       <% } %>
 </body>
 </html>
 </body>

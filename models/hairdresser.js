@@ -7,6 +7,12 @@ const hairdresserSchema = new mongoose.Schema({
   password: { type: String, required: true }
 });
 
+hairdresserSchema.virtual('pictures', {
+  ref: 'Picture',
+  foreignField: 'creator',
+  localField: '_id'
+});
+
 hairdresserSchema.methods.validatePassword = function(password){
   return bcrypt.compareSync(password, this.password);
 };
