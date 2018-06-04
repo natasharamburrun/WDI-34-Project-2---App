@@ -4,14 +4,17 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const mongoose = require('mongoose');
-
-
-const databaseURI ='mongodb://localhost/hair-app'
+const app = express();
 
 const router = require('./config/router');
+const hairdresser = require('./models/hairdresser');
+const { port, dbURI } = require('./config/environment');
 
+mongoose.connect(dbURI);
 
-const app = express();
+//
+// const databaseURI ='mongodb://localhost/hair-app';
+
 //
 // app.get('/', (req, res)=> res.send('<h1>Hello World!</h1>'));
 
