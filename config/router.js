@@ -3,7 +3,7 @@ const router = require('express').Router();
 const static = require('../controllers/static');
 const registrations = require('../controllers/registrations');
 const sessions = require('../controllers/sessions');
-const pictures = require('../controllers/pictures');
+// const pictures = require('../controllers/pictures');
 
 router.get('/', (req, res) => res.render('home', { isHomepage: true }));
 

@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
 });
 
 userSchema.virtual('pictures', {
-  ref: 'Picture',
+  // ref: 'Picture',
   foreignField: 'creator',
   localField: '_id'
 });
