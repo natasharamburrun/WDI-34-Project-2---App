@@ -15,7 +15,7 @@ function showRoute(req, res){
     .findById(req.params.id)
     .exec()
     .then( portfolio =>{
-      res.render('pictures/show', {portfolio});
+      res.render('portfolio/show', {portfolio});
     });
 }
 function newRoute(req, res){

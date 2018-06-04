@@ -18,9 +18,9 @@ router.route('/register')
 router.route('/logout')
   .get(sessions.delete);
 //
-// router.route('/pictures')
-//   .get(pictures.index)
-//   .post(pictures.create);
+router.route('/hair')
+  .get(portfolio.index)
+  .post(portfolio.create);
 // router.route('/pictures/new')
 //   .get(pictures.new);
 // router.route('/pictures/:id')
