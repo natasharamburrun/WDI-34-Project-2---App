@@ -1,14 +1,14 @@
-const hairdresser = require('../models/hairdresser');
+const user = require('../models/user');
 
 function newRoute(req, res) {
   res.render('registrations/new');
 }
 
 function createRoute(req, res){
-  hairdresser
+  user
     .create(req.body)
-    .then((hairdresser)=>{
-      console.log(hairdresser);
+    .then((user)=>{
+      console.log(user);
       res.redirect('/');
     })
     .catch((err) => {

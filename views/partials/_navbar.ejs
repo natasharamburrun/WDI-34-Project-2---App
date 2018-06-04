@@ -11,13 +11,18 @@
   </div>
   <div class="navbar-menu" id="navMenu">
     <div class="navbar-start">
-        <a href="/hairdresser/login" class="navbar-item">
-          Hairdressers Login
+        <a href="/login" class="navbar-item">
+          Login
         </a>
-        <a href="/client/login" class="navbar-item">
-          Client Login
+        <a href="/register" class="navbar-item">
+          Register
         </a>
-      </div>
+    </div>
+    <% if(locals.isLoggedIn){ %>
+      <a href="/logout" class="navbar-item">
+        logout
+      </a>
+      <% } %>
     <div class="navbar-end">
       <a href="/hair" class="navbar-item">
         Hair

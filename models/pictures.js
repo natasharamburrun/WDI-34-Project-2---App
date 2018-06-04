@@ -8,7 +8,7 @@ const commentSchema = new mongoose.Schema({
 const pictureSchema = new mongoose.Schema({
   title: String,
   url: String,
-  creator: {type: mongoose.Schema.Types.ObjectId, ref: 'hairdresser'},
+  creator: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
   comments: [commentSchema]
 });
 
