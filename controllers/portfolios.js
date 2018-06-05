@@ -19,7 +19,6 @@ function showRoute(req, res){
     });
 }
 function newRoute(req, res){
-  console.log(req, res);
   if(!res.locals.user.isHairdresser) return res.redirect('/');
   res.render('portfolios/new');
 }
@@ -36,7 +35,7 @@ function createRoute(req, res){
 }
 function editRoute(req, res){
   Portfolio
-    .findById(req.params.id)
+    .findById(req.session.id)
     .exec()
     .then( portfolio =>{
       res.render('portfolios/edit', {portfolio});

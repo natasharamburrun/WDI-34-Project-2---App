@@ -21,7 +21,7 @@ router.route('/logout')
 router.route('/portfolios')
   .get(portfolios.index)
   .post(portfolios.create);
-  
+
 router.route('/portfolios/new')
   .get(portfolios.new);
 
