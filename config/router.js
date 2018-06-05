@@ -18,20 +18,20 @@ router.route('/register')
 router.route('/logout')
   .get(sessions.delete);
 
-router.route('/portfolio')
+router.route('/portfolios')
   .get(portfolios.index)
   .post(portfolios.create);
-router.route('/portfolio/new')
+router.route('/portfolios/new')
   .get(portfolios.new);
 
-router.route('/portfolio/:id')
+router.route('/portfolios/:id')
   .get(portfolios.show)
   .put(portfolios.update)
   .delete(portfolios.delete);
-router.route('/portfolio/:id/edit')
+router.route('/portfolios/:id/edit')
   .get(portfolios.edit);
 
-router.route('/portfolio/:id/comment')
+router.route('/portfolios/:id/comment')
   .post(portfolios.createComment);
 
 module.exports = router;

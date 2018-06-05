@@ -4,7 +4,6 @@
   </div>
   <div class="column is-half">
 
-    <a href="/portfolio/<%= portfolio.id %>/show">Show</a>
     <ul>
       <li>Stylist Name <%= portfolio.name %> </li>
       <li>Salon <%= portfolio.salon %> </li>
@@ -14,13 +13,13 @@
       <li>Stylist price range <%= portfolio.price %> </li>
       <li>About <%= portfolio.about %> </li>
     </ul>
-    <a href="/portfolio/<%= portfolio.id %>/edit">Edit</a>
+    <a href="/portfolios/<%= portfolio.id %>/edit">Edit</a>
 
-    <form action="/portfolio/<%= portfolio.id %>" method="post">
+    <form action="/portfolios/<%= portfolio.id %>" method="post">
       <input type="hidden" name="_method" value="DELETE">
       <button name="button">Delete Profile</button>
     </form>
-    <form class="" action="/portfolio/<%= portfolio.id %>/comment" method="post">
+    <form class="" action="/portfolios/<%= portfolio.id %>/comment" method="post">
       <textarea name="content" rows="8" cols="80"></textarea>
       <button name="button">Post a comment</button>
     </form>

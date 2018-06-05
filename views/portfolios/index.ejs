@@ -7,7 +7,7 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <a href= '/portfolios/<%= portfolio.id %>'> <%= portfolio.title %></a>
+                  <a href= '/portfolios/<%= portfolio.id %>'> <%= portfolio.title %></a>
                   <img style="max-width: 200px " src='<%= portfolio.url %>' alt='<%= portfolio.title %>' />
                     <% if (portfolio.creator) {%>
                   <%= portfolio.creator.user %>
@@ -29,16 +29,5 @@
         </div>
       </div>
     </div>
-      <div class="media-content">
-        <p class="name is-4">John Smith</p>
-        <p class="email is-6">@johnsmith</p>
-      </div>
-      <div class="content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-        <a href="#">#css</a> <a href="#">#responsive</a>
-      </div>
-    </div>
-  </div>
   <% }) %>
 </div>

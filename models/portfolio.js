@@ -5,18 +5,19 @@ const commentSchema = new mongoose.Schema({
   user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
 });
 
-const pictureSchema = new mongoose.Schema({
-  title: String,
-  url: String,
-  creator: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
-  comments: [commentSchema]
-});
+// const pictureSchema = new mongoose.Schema({
+//   title: String,
+//   url: String,
+//   creator: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
+//   comments: [commentSchema]
+// });
 
 const portfolioSchema = new mongoose.Schema({
   title: String,
   url: String,
   creator: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
-  pictures: [pictureSchema]
+  // pictures: [pictureSchema]
+  comments: [commentSchema]
 });
 
 module.exports = mongoose.model('portfolio', portfolioSchema);
