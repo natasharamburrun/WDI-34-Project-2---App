@@ -19,7 +19,7 @@ const portfolioSchema = new mongoose.Schema({
   address: String,
   tel: Number,
   about: String,
-  price: Number,
+  price: String,
   url: String,
   creator: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
   // pictures: [pictureSchema]

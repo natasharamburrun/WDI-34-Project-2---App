@@ -1,27 +1,26 @@
+<div class= "container">
+  <div class="columns">
+    <div class="column is-half">
+      <img src='<%= portfolio.url %>' alt='<%= portfolio.title %>'>
+    </div>
+    <div class="column is-half">
+      <ul>
+        <li><strong>Name</strong>: <%= portfolio.name %> </li>
+        <li><strong>Stylist price from:</strong> <%= portfolio.price %> </li>
+        <li><strong>About the stylist:</strong> <%= portfolio.about %> </li>
+      </ul>
+      <a href="/portfolios/<%= portfolio.id %>/edit">Edit</a>
 
-<div class="columns">
-  <div class="column is-half">
-    <img src='<%= portfolio.url %>' alt='<%= portfolio.title %>'>
-  </div>
-  <div class="column is-half">
-    <ul>
-      <li>Name <%= portfolio.name %> </li>
-      <li>Salon <%= portfolio.salon %> </li>
-      <li>email <%= portfolio.email %> </li>
-      <li>Address <%= portfolio.address %> </li>
-      <li>Tel <%= portfolio.tel %> </li>
-      <li>Stylist price range <%= portfolio.price %> </li>
-      <li>About <%= portfolio.about %> </li>
-    </ul>
-    <a href="/portfolios/<%= portfolio.id %>/edit">Edit</a>
+      <form action="/portfolios/<%= portfolio.id %>" method="post">
+        <input type="hidden" name="_method" value="DELETE">
+        <button name="button">Delete Profile</button>
+      </form>
 
-    <form action="/portfolios/<%= portfolio.id %>" method="post">
-      <input type="hidden" name="_method" value="DELETE">
-      <button name="button">Delete Profile</button>
-    </form>
-    <form class="" action="/portfolios/<%= portfolio.id %>/comment" method="post">
-      <textarea name="content" rows="8" cols="80"></textarea>
-      <button name="button">Post a comment</button>
-    </form>
+
+      <form class="" action="/portfolios/<%= portfolio.id %>/comment" method="post">
+        <textarea name="content" rows="8" cols="80"></textarea>
+        <button name="button">Post a comment</button>
+      </form>
+    </div>
   </div>
 </div>
