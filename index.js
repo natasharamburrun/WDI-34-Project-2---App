@@ -41,7 +41,7 @@ app.use((req, res, next) => {
   console.log(req.session);
   user
     .findById(req.session.userId)
-    .populate({path: 'pictures', populate: {path: 'creator'}})
+    .populate({path: 'portfolio', populate: {path: 'creator'}})
     .populate('portfolio')
     .exec()
     .then((user) =>{

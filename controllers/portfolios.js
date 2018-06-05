@@ -35,19 +35,22 @@ function createRoute(req, res){
 }
 function editRoute(req, res){
   Portfolio
-    .findOne({user: req.session.userId})
-    .then(portfolio =>{
-      console.log(portfolio);
-      res.render('portfolios/edit', {portfolio});
+    .findById(req.params.id)
+    .exec()
+    .then((portfolio) =>{
+      // if (req.params.id === res.local.user.id){
+        res.render('portfolios/edit', {portfolio});
+      // } else {
+        // return res.redirect('/');
+      // }
     });
-
 }
 function updateRoute(req, res){
   Portfolio
     .findById(req.params.id)
     .update(req.body)
-    .then( portfolio =>{
-      return res.redirect(`/portfolios/${portfolio.id}`);
+    .then(() => {
+      return res.redirect(`/portfolios/${req.params.id}`);
     });
 }
 function deleteRoute(req, res){
