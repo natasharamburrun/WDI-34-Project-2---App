@@ -21,6 +21,7 @@ router.route('/logout')
 router.route('/portfolios')
   .get(portfolios.index)
   .post(portfolios.create);
+  
 router.route('/portfolios/new')
   .get(portfolios.new);
 
@@ -28,6 +29,7 @@ router.route('/portfolios/:id')
   .get(portfolios.show)
   .put(portfolios.update)
   .delete(portfolios.delete);
+
 router.route('/portfolios/:id/edit')
   .get(portfolios.edit);
 

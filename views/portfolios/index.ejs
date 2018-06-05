@@ -2,29 +2,28 @@
 
 <div class="columns is-multiline">
   <% portfolios.forEach((portfolio) => { %>
-      <div class=" column is-one-half-desktop is-full-tablet">
-        <div class="column">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <a href= '/portfolios/<%= portfolio.url %>'> <%= portfolio.name %></a>
-                <img style="max-width: 200px " src='<%= portfolio.url %>' alt='<%= portfolio.name %>' />
-              </figure>
-              <div class="media-content">
-                <p class="title is-4"><%= portfolio.name %>
-                <p class="subtitle is-6"><%= portfolio.salon %>
-              </div>
-              <div class="media-left">
-                <div class="content"><%= portfolio.about %>
-              </div>
-              </div>
+    <div class=" column is-one-third-desktop is-half-tablet">
+      <div class="column">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-2by2">
+              <a href= '/portfolios/<%= portfolio.url %>'></a>
+              <img style="max-width: 700px " src='<%= portfolio.url %>' alt='<%= portfolio.name %>' />
+            </figure>
+            <div class="media-name">
+              <p class="title is-4"><%= portfolio.name %>
+              <p class="subtitle is-6"><%= portfolio.salon %>
+            </div>
+            <div class="media-about">
+              <div class="content"><%= portfolio.about %>
+            </div>
+            <div class="media-contact">
+              <div class="content"><%= portfolio.address %>
+              <div class="content"><%= portfolio.tel %>
             </div>
           </div>
         </div>
       </div>
-
+    </div>
   <% }) %>
-
-
-  </div>
 </div>
