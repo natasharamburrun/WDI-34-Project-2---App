@@ -39,9 +39,9 @@ function editRoute(req, res){
     .exec()
     .then((portfolio) =>{
       // if (req.params.id === res.local.user.id){
-        res.render('portfolios/edit', {portfolio});
+      res.render('portfolios/edit', {portfolio});
       // } else {
-        // return res.redirect('/');
+      // return res.redirect('/');
       // }
     });
 }
