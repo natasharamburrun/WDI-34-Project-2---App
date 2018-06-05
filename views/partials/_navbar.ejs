@@ -23,6 +23,11 @@
         logout
       </a>
       <% } %>
+    <% if(locals.isLoggedIn && locals.user.isHairdresser){ %>
+      <a href="/portfolio/new" class="navbar-item">
+        Add New Portfolio
+      </a>
+      <% } %>
     <div class="navbar-end">
       <a href="/hair" class="navbar-item">
         Hair

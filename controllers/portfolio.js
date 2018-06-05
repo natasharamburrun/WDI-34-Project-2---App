@@ -1,12 +1,12 @@
-const Portfolio = require('../models/Portfolio.js');
+const Portfolio = require('../models/portfolio.js');
 
 function indexRoute(req, res){
   Portfolio
     .find()
     .populate('creator')
     .exec()
-    .then( portfolio =>{
-      res.render('portfolio/index', {portfolio});
+    .then( portfolios =>{
+      res.render('portfolios/index', {portfolios});
     });
 }
 
@@ -15,12 +15,12 @@ function showRoute(req, res){
     .findById(req.params.id)
     .exec()
     .then( portfolio =>{
-      res.render('portfolio/show', {portfolio});
+      res.render('portfolios/show', {portfolio});
     });
 }
 function newRoute(req, res){
-  if(!res.locals.isLoggedIn) return res.redirect('/');
-  res.render('portfolio/new');
+  if(!res.locals.isHairdresser) return res.redirect('/');
+  res.render('portfolios/new');
 }
 function createRoute(req, res){
   const portfolioData = req.body;
@@ -28,7 +28,7 @@ function createRoute(req, res){
   Portfolio
     .create(req.body)
     .then( portfolio =>{
-      return res.redirect(`/portfolio/${portfolio.id}`);
+      return res.redirect(`/portfolios/${portfolio.id}`);
     });
 }
 function editRoute(req, res){
@@ -36,7 +36,7 @@ function editRoute(req, res){
     .findById(req.params.id)
     .exec()
     .then( portfolio =>{
-      res.render('portfolio/edit', {portfolio});
+      res.render('portfolios/edit', {portfolio});
     });
 }
 function updateRoute(req, res){
@@ -44,7 +44,7 @@ function updateRoute(req, res){
     .findById(req.params.id)
     .update(req.body)
     .then( portfolio =>{
-      return res.redirect(`/portfolio/${portfolio.id}`);
+      return res.redirect(`/portfolios/${portfolio.id}`);
     });
 }
 function deleteRoute(req, res){
@@ -52,7 +52,7 @@ function deleteRoute(req, res){
     .findById(req.params.id)
     .then( portfolio =>{
       portfolio.remove();
-      return res.redirect('/portfolio');
+      return res.redirect('/portfolios');
     });
 }
 function createCommentRoute(req, res){
@@ -61,7 +61,7 @@ function createCommentRoute(req, res){
     .exec()
     .then(portfolio => {
       portfolio.comments.create(req.body);
-      return res.redirect(`/portfolio/${portfolio.id}`);
+      return res.redirect(`/portfolios/${portfolio.id}`);
     });
 }
 function createPictureRoute(req, res){
@@ -70,7 +70,7 @@ function createPictureRoute(req, res){
     .exec()
     .then(portfolio => {
       portfolio.comments.create(req.body);
-      return res.redirect(`/portfolio/${portfolio.id}`);
+      return res.redirect(`/portfolios/${portfolio.id}`);
     });
 }
 function editPictureRoute(req, res){
@@ -79,7 +79,7 @@ function editPictureRoute(req, res){
     .exec()
     .then(portfolio => {
       portfolio.comments.create(req.body);
-      return res.redirect(`/portfolio/${portfolio.id}`);
+      return res.redirect(`/portfolios/${portfolio.id}`);
     });
 }
 module.exports = {

@@ -5,6 +5,7 @@ function newRoute(req, res) {
 }
 
 function createRoute(req, res){
+  // console.log(req.body);
   user
     .create(req.body)
     .then((user)=>{

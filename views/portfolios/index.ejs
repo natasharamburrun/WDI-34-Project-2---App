@@ -1,13 +1,14 @@
 <h2>Stylist Portfolio</h2>
+
 <div class="columns">
-  <% portfolio.forEach((portfolio) => { %>
+  <% portfolios.forEach((portfolio) => { %>
       <div class=" column is-one-third-desktop is-half-tablet">
         <div class="column">
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <a href= '/pictures/<%= picture.id %>'> <%= picture.title %></a>
-                  <img style="max-width: 200px " src='<%= picture.url %>' alt='<%= picture.title %>' />
+                <a href= '/portfolios/<%= portfolio.id %>'> <%= portfolio.title %></a>
+                  <img style="max-width: 200px " src='<%= portfolio.url %>' alt='<%= portfolio.title %>' />
                     <% if (portfolio.creator) {%>
                   <%= portfolio.creator.user %>
                 <% } %>
@@ -20,10 +21,10 @@
       <div class="media">
         <div class="media-left">
           <figure class="image is-48x48">
-          <img style="max-width: 200px " src='<%= picture.url %>' alt='<%= picture.title %>' />
+            <img style="max-width: 200px " src='<%= portfolio.url %>' alt='<%= portfolio.title %>' />
             <% if (portfolio.creator) {%>
-          <%= portfolio.creator.user %>
-        <% } %>
+              <%= portfolio.creator.user %>
+            <% } %>
           </figure>
         </div>
       </div>
