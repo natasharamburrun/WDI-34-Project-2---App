@@ -2,34 +2,29 @@
 
 <div class="columns is-multiline">
   <% portfolios.forEach((portfolio) => { %>
-      <div class=" column is-one-third-desktop is-half-tablet">
+      <div class=" column is-one-half-desktop is-full-tablet">
         <div class="column">
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                  <a href= '/portfolios/<%= portfolio.id %>'> <%= portfolio.title %></a>
-                  <img style="max-width: 200px " src='<%= portfolio.url %>' alt='<%= portfolio.title %>' />
-                    <% if (portfolio.creator) {%>
-                  <%= portfolio.creator.user %>
-                <% } %>
+                <a href= '/portfolios/<%= portfolio.url %>'> <%= portfolio.name %></a>
+                <img style="max-width: 200px " src='<%= portfolio.url %>' alt='<%= portfolio.name %>' />
               </figure>
+              <div class="media-content">
+                <p class="title is-4"><%= portfolio.name %>
+                <p class="subtitle is-6"><%= portfolio.salon %>
+              </div>
+              <div class="media-left">
+                <div class="content"><%= portfolio.about %>
+              </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="card-content">
-      <div class="media">
-        <div class="media-left">
-          <figure class="image is-48x48">
-            <img style="max-width: 200px " src='<%= portfolio.url %>' alt='<%= portfolio.title %>' />
-            <% if (portfolio.creator) {%>
-              <%= portfolio.creator.user %>
-            <% } %>
-          </figure>
-        </div>
-      </div>
-    </div>
-  <% }) %>
-</div>
 
+  <% }) %>
+
+
+  </div>
 </div>
