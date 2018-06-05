@@ -35,11 +35,12 @@ function createRoute(req, res){
 }
 function editRoute(req, res){
   Portfolio
-    .findById(req.session.id)
-    .exec()
-    .then( portfolio =>{
+    .findOne({user: req.session.userId})
+    .then(portfolio =>{
+      console.log(portfolio);
       res.render('portfolios/edit', {portfolio});
     });
+
 }
 function updateRoute(req, res){
   Portfolio

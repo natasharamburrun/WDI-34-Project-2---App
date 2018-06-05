@@ -42,6 +42,7 @@ app.use((req, res, next) => {
   user
     .findById(req.session.userId)
     .populate({path: 'pictures', populate: {path: 'creator'}})
+    .populate('portfolio')
     .exec()
     .then((user) =>{
       res.locals.user = user;

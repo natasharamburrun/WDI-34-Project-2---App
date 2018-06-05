@@ -25,13 +25,15 @@ router.route('/portfolios')
 router.route('/portfolios/new')
   .get(portfolios.new);
 
+  router.route('/portfolios/edit')
+    .get(portfolios.edit);
+
 router.route('/portfolios/:id')
   .get(portfolios.show)
   .put(portfolios.update)
   .delete(portfolios.delete);
 
-router.route('/portfolios/:id/edit')
-  .get(portfolios.edit);
+
 
 router.route('/portfolios/:id/comment')
   .post(portfolios.createComment);
