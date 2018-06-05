@@ -19,9 +19,12 @@ function showRoute(req, res){
     });
 }
 function newRoute(req, res){
-  if(!res.locals.isHairdresser) return res.redirect('/');
+  console.log(req, res);
+  if(!res.locals.user.isHairdresser) return res.redirect('/');
   res.render('portfolios/new');
 }
+// locals.isLoggedIn && locals.user.isHairdresser
+
 function createRoute(req, res){
   const portfolioData = req.body;
   portfolioData['creator'] = res.locals.user.id;
@@ -64,24 +67,6 @@ function createCommentRoute(req, res){
       return res.redirect(`/portfolios/${portfolio.id}`);
     });
 }
-function createPictureRoute(req, res){
-  Portfolio
-    .findById(req.params.id)
-    .exec()
-    .then(portfolio => {
-      portfolio.comments.create(req.body);
-      return res.redirect(`/portfolios/${portfolio.id}`);
-    });
-}
-function editPictureRoute(req, res){
-  Portfolio
-    .findById(req.params.id)
-    .exec()
-    .then(portfolio => {
-      portfolio.comments.create(req.body);
-      return res.redirect(`/portfolios/${portfolio.id}`);
-    });
-}
 module.exports = {
   index: indexRoute,
   show: showRoute,
@@ -90,7 +75,5 @@ module.exports = {
   edit: editRoute,
   update: updateRoute,
   delete: deleteRoute,
-  createComment: createCommentRoute,
-  createPicture: createPictureRoute,
-  editPictureRoute: editPictureRoute
+  createComment: createCommentRoute
 };

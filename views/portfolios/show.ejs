@@ -3,6 +3,8 @@
     <img src='<%= portfolio.url %>' alt='<%= portfolio.title %>'>
   </div>
   <div class="column is-half">
+
+    <a href="/portfolio/<%= portfolio.id %>/show">Show</a>
     <ul>
       <li>Stylist Name <%= portfolio.name %> </li>
       <li>Salon <%= portfolio.salon %> </li>
@@ -13,6 +15,7 @@
       <li>About <%= portfolio.about %> </li>
     </ul>
     <a href="/portfolio/<%= portfolio.id %>/edit">Edit</a>
+
     <form action="/portfolio/<%= portfolio.id %>" method="post">
       <input type="hidden" name="_method" value="DELETE">
       <button name="button">Delete Profile</button>
