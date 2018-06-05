@@ -13,7 +13,13 @@ const commentSchema = new mongoose.Schema({
 // });
 
 const portfolioSchema = new mongoose.Schema({
-  title: String,
+  name: String,
+  salon: String,
+  email: String,
+  address: String,
+  tel: Number,
+  about: String,
+  price: Number,
   url: String,
   creator: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
   // pictures: [pictureSchema]
