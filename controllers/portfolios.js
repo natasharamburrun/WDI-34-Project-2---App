@@ -68,18 +68,28 @@ function createCommentRoute(req, res){
     .exec()
     .then(portfolio => {
       portfolio.comments.push(req.body);
+      const commentData = req.body;
+      commentData.user = res.locals.currentUser.id;
+      portfolio.comments.push(commentData);
       portfolio.save();
-      return res.redirect(`/portfolios/${portfolio.id}`);
+      return res.redirect(`/portfolios/${portfolio._id}`);
     });
 }
 
-function deleteCommentRoute(req, res){
+function deleteCommentRoute(req, res, next){
   Portfolio
     .findById(req.params.id)
+    .exec()
     .then( portfolio =>{
-      portfolio.remove();
-      return res.redirect('/portfolios');
-    });
+      // console.log(req.params.commentId.replace(' ', ''));
+      const comment = portfolio.comments.id(req.params.commentId);
+      // console.log(portfolio.comments);
+      console.log(comment);
+      comment.remove();
+      return portfolio.save();
+    })
+    .then( portfolio => res.redirect(`/portfolios/${portfolio._id}`))
+    .catch(next);
 }
 module.exports = {
   index: indexRoute,
@@ -90,5 +100,5 @@ module.exports = {
   update: updateRoute,
   delete: deleteRoute,
   createComment: createCommentRoute,
-  deleteComment: createCommentRoute
+  deleteComment: deleteCommentRoute
 };

@@ -35,5 +35,7 @@ router.route('/portfolios/:id')
 
 router.route('/portfolios/:id/comment')
   .post(portfolios.createComment);
+router.route('/portfolios/:id/comment/:commentId')
+  .delete(portfolios.deleteComment);
 
 module.exports = router;

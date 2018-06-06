@@ -25,17 +25,20 @@
         <button name="button">Post comment</button>
       </form>
 
-        <% console.log(portfolio.comments) %>
-        <% portfolio.comments.forEach((comment) => { %>
-          <div class="comment"><%= comment.content %>
-          // <article class="media">
-          //   <div class="media-content">
-          //         <div class="media-comment">
-          //           </div>
-          //         </div>
-          //   </div>
-          // </article>
-        <% }) %>
+      <article class="media-content">
+        <div = class="content">
+          <% portfolio.comments.forEach((comment) => { %>
+            <div class="comment"><%= comment.content %>
+            <% console.log(portfolio.comments) %>
+
+            <form class="" action="/portfolios/<%= portfolio.id %>/comment/<%= comment.id%>" method="post">
+            <input type="hidden" name="_method" value="DELETE">
+            <button name="button">Delete comment</button>
+            </form>
+            </div>
+          <% }) %>
+        </div>
+      </article>
     </div>
   </div>
 </div>
