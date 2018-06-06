@@ -27,14 +27,14 @@
 
         <% console.log(portfolio.comments) %>
         <% portfolio.comments.forEach((comment) => { %>
-          <article class="media">
-            <div class="media-content">
-                  <div class="media-comment">
-                    <div class="comment"><%= comment.content %>
-                    </div>
-                  </div>
-            </div>
-          </article>
+          <div class="comment"><%= comment.content %>
+          // <article class="media">
+          //   <div class="media-content">
+          //         <div class="media-comment">
+          //           </div>
+          //         </div>
+          //   </div>
+          // </article>
         <% }) %>
     </div>
   </div>
