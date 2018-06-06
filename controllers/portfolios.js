@@ -13,6 +13,7 @@ function indexRoute(req, res){
 function showRoute(req, res){
   Portfolio
     .findById(req.params.id)
+    .populate('creator')
     .exec()
     .then( portfolio =>{
       res.render('portfolios/show', {portfolio});

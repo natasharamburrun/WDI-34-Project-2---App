@@ -45,7 +45,7 @@ app.use((req, res, next) => {
     .populate('portfolio')
     .exec()
     .then((user) =>{
-      res.locals.user = user;
+      res.locals.currentUser = user;
       res.locals.isLoggedIn = true;
       next();
     });
