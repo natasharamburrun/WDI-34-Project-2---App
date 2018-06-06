@@ -1,4 +1,5 @@
 const Portfolio = require('../models/portfolio.js');
+const Picture = require('../models/picture.js');
 
 function indexRoute(req, res){
   Portfolio
@@ -11,13 +12,22 @@ function indexRoute(req, res){
 }
 
 function showRoute(req, res){
-  Portfolio
-    .findById(req.params.id)
-    .populate('creator')
-    .exec()
-    .then( (portfolio) =>{
-      res.render('portfolios/show', {portfolio});
+  // Picture
+  //   .findById(req.params.id)
+  //   .populate('creator');
+  Promise.all([Picture.find(), Portfolio.findById(req.params.id)])
+    .then((values)=> {
+      //console.log('values should be here:', values);
+      res.render('portfolios/show', {values});
     });
+
+  // Portfolio
+  //   .findById(req.params.id)
+  //   .populate('creator')
+  //   .exec()
+  //   .then( (portfolio) =>{
+  //     res.render('portfolios/show', {portfolio});
+  //   });
 }
 function newRoute(req, res){
   if(!res.locals.currentUser.isHairdresser) return res.redirect('/');
