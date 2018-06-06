@@ -1,4 +1,4 @@
-<div class= "container portfolio">
+<div class= "container-largeImg">
   <div class="columns">
     <div class="column is-half">
       <img src='<%= values[1].url %>' alt='<%= values[1].title %>'>
@@ -41,20 +41,16 @@
     </div>
   </div>
   </div>
-
-
-  <body>
     <section class="section">
-      <div class="container">
+      <div class="container-smallImg">
         <h1 class="title">Portfolio</h1>
           <% console.log('values 0 ', values[0]); %>
           <% values[0].forEach( picture =>{ %>
             <a href='/pictures/<%= picture.id %>'></a>
-            <img style="max-width: 200px " src='<%= picture.url %>' alt='<%= picture.title %>' />
+            <img style="max-width: 200px; max-height: 200px " src='<%= picture.url %>' alt='<%= picture.title %>' />
             <% if(picture.creator){%>
                 <%= picture.creator.username %>
           <% } %>
           <% }) %>
       </div>
     </section>
-  </body>

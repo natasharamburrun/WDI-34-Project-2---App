@@ -1,8 +1,10 @@
-
-<img src='<%= picture.url %>' alt='<%= picture.title %>' />
-
-<a href="/pictures/<%= picture.id %>/edit">Edit</a>
-<form action="/pictures/<%= picture.id %>" method="post">
-  <input type="hidden" name="_method" value="DELETE">
-  <button name="button">Delete Profile</button>
-</form>
+<section class="section">
+  <div class="container-hairSection">
+    <img src='<%= picture.url %>' alt='<%= picture.title %>' />
+    <a href="/pictures/<%= picture.id %>/edit">Edit</a>
+    <form action="/pictures/<%= picture.id %>" method="post">
+      <input type="hidden" name="_method" value="DELETE">
+      <button name="button">Delete Profile</button>
+    </form>
+  </div>
+</section>

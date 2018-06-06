@@ -1,12 +1,21 @@
-<h2>All Pictures</h2>
-<ul>
-  <% pictures.forEach( picture =>{ %>
-    <li>
-      <a href='/pictures/<%= picture.id %>'> <%= picture.title %></a>
-      <img style="max-width: 200px " src='<%= picture.url %>' alt='<%= picture.title %>' />
-      <% if(picture.creator){%>
-        <%= picture.creator.username %>
-      <% } %>
-    </li>
-  <% }) %>
-</ul>
+<div class="columns is-multiline">
+  <div class="column is-one-quarter">
+    <section class="section">
+      <div class="container-gridLayout">
+        <ul>
+          <% pictures.forEach( picture =>{ %>
+        <li>
+        <figure class="image is-256x256">
+          <a href='/pictures/<%= picture.id %>'> <%= picture.title %></a>
+          <img style="max-width: 250px; max-height: 250px " src='<%= picture.url %>' alt='<%= picture.title %>' />
+        </figure>
+        <% if(picture.creator){%>
+          <%= picture.creator.username %>
+          <% } %>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+    </section>
+  </div>
+</div>

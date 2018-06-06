@@ -19,9 +19,18 @@ body {
 .container ul li {
   color: grey; }
 
-.container img {
-  border: solid 1px;
-  width: max-width 300px; }
+.container-largeImg img {
+  border: solid blue 1px; }
+
+.container-smallImg img {
+  border: solid red 1px;
+  max-width: 200px; }
+
+.container-hairSection img {
+  border: solid yellow 1px; }
+
+.container-gridLayout img {
+  border: solid green 1px; }
 
 .card-image img {
   display: flex;
@@ -36,9 +45,5 @@ body {
 
 .comment {
   border: solid 1px; }
-
-.pics ul img {
-  border: solid 1px;
-  flex-wrap: wrap; }
 
 /*# sourceMappingURL=style.css.map */
