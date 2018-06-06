@@ -63,16 +63,14 @@ function deleteRoute(req, res){
     });
 }
 function createCommentRoute(req, res){
+  req.body.user = req.currentUser;
   Portfolio
     .findById(req.params.id)
     .exec()
     .then(portfolio => {
       portfolio.comments.push(req.body);
-      const commentData = req.body;
-      commentData.user = res.locals.currentUser.id;
-      portfolio.comments.push(commentData);
       portfolio.save();
-      return res.redirect(`/portfolios/${portfolio._id}`);
+      return res.redirect(`/portfolios/${portfolio.id}`);
     });
 }
 
@@ -88,7 +86,7 @@ function deleteCommentRoute(req, res, next){
       comment.remove();
       return portfolio.save();
     })
-    .then( portfolio => res.redirect(`/portfolios/${portfolio._id}`))
+    .then( portfolio => res.redirect(`/portfolios/${portfolio.id}`))
     .catch(next);
 }
 module.exports = {

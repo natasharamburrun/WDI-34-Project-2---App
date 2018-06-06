@@ -4,6 +4,7 @@
       <img src='<%= portfolio.url %>' alt='<%= portfolio.title %>'>
     </div>
     <div class="column is-half">
+
       <ul>
         <li><strong>Name: </strong> <%= portfolio.name %> </li>
         <li><strong>Stylist price from:</strong> <%= portfolio.price %> </li>
@@ -20,6 +21,7 @@
         <% } %>
       <% } %>
 
+
       <form class="" action="/portfolios/<%= portfolio.id %>/comment" method="post">
         <textarea name="content" rows="8" cols="80"></textarea>
         <button name="button">Post comment</button>
@@ -29,12 +31,12 @@
         <div = class="content">
           <% portfolio.comments.forEach((comment) => { %>
             <div class="comment"><%= comment.content %>
-            <% console.log(portfolio.comments) %>
 
             <form class="" action="/portfolios/<%= portfolio.id %>/comment/<%= comment.id%>" method="post">
-            <input type="hidden" name="_method" value="DELETE">
-            <button name="button">Delete comment</button>
+              <input type="hidden" name="_method" value="DELETE">
+              <button name="button">Delete comment</button>
             </form>
+
             </div>
           <% }) %>
         </div>
