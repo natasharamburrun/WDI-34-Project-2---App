@@ -1,0 +1,12 @@
+<h2>All Pictures</h2>
+<ul>
+  <% pictures.forEach( picture =>{ %>
+    <li>
+      <a href='/pictures/<%= picture.id %>'> <%= picture.title %></a>
+      <img style="max-width: 200px " src='<%= picture.url %>' alt='<%= picture.title %>' />
+      <% if(picture.creator){%>
+        <%= picture.creator.username %>
+      <% } %>
+    </li>
+  <% }) %>
+</ul>

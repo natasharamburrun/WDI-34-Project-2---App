@@ -31,16 +31,18 @@
         <div = class="content">
           <% portfolio.comments.forEach((comment) => { %>
             <div class="comment"><%= comment.content %>
-
             <form class="" action="/portfolios/<%= portfolio.id %>/comment/<%= comment.id%>" method="post">
               <input type="hidden" name="_method" value="DELETE">
               <button name="button">Delete comment</button>
             </form>
-
             </div>
           <% }) %>
         </div>
       </article>
+
     </div>
   </div>
 </div>
+
+
+<a href="/pictures/new">Add a picture</a>

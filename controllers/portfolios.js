@@ -79,9 +79,7 @@ function deleteCommentRoute(req, res, next){
     .findById(req.params.id)
     .exec()
     .then( portfolio =>{
-      // console.log(req.params.commentId.replace(' ', ''));
       const comment = portfolio.comments.id(req.params.commentId);
-      // console.log(portfolio.comments);
       console.log(comment);
       comment.remove();
       return portfolio.save();
