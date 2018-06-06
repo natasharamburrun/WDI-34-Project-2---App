@@ -32,19 +32,20 @@ body{
 }
 
 .container-smallImg img{
-
-  border: solid red 1px;
+  border: solid red 1p;
   max-width: 200px;
 }
 
-.container-hairSection img{
+.section {
+  padding-left: 0px;
+}
+
+.container-hairSection img {
   border: solid yellow 1px;
 }
 
-.container-gridLayout img{
+.container-gridLayout img {
   border: solid green 1px;
-
-
 }
 
 .card-image img {
@@ -63,6 +64,9 @@ body{
 }
 
 .comment {
-  border: solid 1px;
+  border: solid grey 1px;
+}
 
+.sectionComments{
+  display: inline-block;
 }

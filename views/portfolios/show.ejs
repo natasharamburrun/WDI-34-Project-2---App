@@ -19,25 +19,7 @@
         </form>
         <% } %>
       <% } %>
-
-      <form class="" action="/portfolios/<%= values[1].id %>/comment" method="post">
-        <textarea name="content" rows="8" cols="80"></textarea>
-        <button name="button">Post comment</button>
-      </form
-
-      <article class="media-content">
-        <div = class="content">
-          <% values[1].comments.forEach((comment) => { %>
-            <div class="comment"><%= comment.content %>
-            <form class="" action="/portfolios/<%= values[1].id %>/comment/<%= comment.id%>" method="post">
-              <input type="hidden" name="_method" value="DELETE">
-              <button name="button">Delete comment</button>
-            </form>
-            </div>
-          <% }) %>
-          <a href="/pictures/new">Add a picture</a>
-        </div>
-      </article>
+        <a href="/pictures/new">Add a picture</a>
     </div>
   </div>
   </div>
@@ -54,3 +36,21 @@
           <% }) %>
       </div>
     </section>
+
+    <form class="sectionComments" action="/portfolios/<%= values[1].id %>/comment" method="post">
+      <textarea name="content" rows="8" cols="80"></textarea>
+      <button name="button">Post comment</button>
+    </form>
+
+    <article class="media-content">
+      <div = class="content">
+        <% values[1].comments.forEach((comment) => { %>
+          <div class="comment"><%= comment.content %>
+          <form class="" action="/portfolios/<%= values[1].id %>/comment/<%= comment.id%>" method="post">
+          <input type="hidden" name="_method" value="DELETE">
+          <button name="button">Delete comment</button>
+          </form>
+          </div>
+          <% }) %>
+        </div>
+      </article>
