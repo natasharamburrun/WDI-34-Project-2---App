@@ -19,9 +19,14 @@ body {
 .container ul li {
   color: grey; }
 
+.container img {
+  border: solid 1px;
+  width: max-width 300px; }
+
 .card-image img {
   border: solid 1px;
-  height: 200px; }
+  height: 200px;
+  height: max-height 500px; }
 
 .comment {
   border: solid 1px; }
