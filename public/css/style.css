@@ -24,11 +24,21 @@ body {
   width: max-width 300px; }
 
 .card-image img {
-  border: solid 1px;
-  height: 200px;
-  height: max-height 500px; }
+  display: flex;
+  border: solid grey 1px;
+  height: 250px; }
+
+.media-name p {
+  margin: 5px; }
+
+.media-contact {
+  margin: 5px; }
 
 .comment {
   border: solid 1px; }
+
+.pics ul img {
+  border: solid 1px;
+  flex-wrap: wrap; }
 
 /*# sourceMappingURL=style.css.map */

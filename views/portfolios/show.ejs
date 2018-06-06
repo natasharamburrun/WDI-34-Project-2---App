@@ -35,25 +35,26 @@
             </form>
             </div>
           <% }) %>
+          <a href="/pictures/new">Add a picture</a>
         </div>
       </article>
-
     </div>
   </div>
-</div>
-
-<ul>
-  <% console.log('values 0 ', values[0]); %>
-  <% values[0].forEach( picture =>{ %>
-    <li>
-      <a href='/pictures/<%= picture.id %>'> <%= picture.title %></a>
-      <img style="max-width: 200px " src='<%= picture.url %>' alt='<%= picture.title %>' />
-      <% if(picture.creator){%>
-        <%= picture.creator.username %>
-      <% } %>
-    </li>
-  <% }) %>
-</ul>
+  </div>
 
 
-<a href="/pictures/new">Add a picture</a>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Portfolio</h1>
+          <% console.log('values 0 ', values[0]); %>
+          <% values[0].forEach( picture =>{ %>
+            <a href='/pictures/<%= picture.id %>'></a>
+            <img style="max-width: 200px " src='<%= picture.url %>' alt='<%= picture.title %>' />
+            <% if(picture.creator){%>
+                <%= picture.creator.username %>
+          <% } %>
+          <% }) %>
+      </div>
+    </section>
+  </body>

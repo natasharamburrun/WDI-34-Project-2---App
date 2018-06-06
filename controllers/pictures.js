@@ -11,6 +11,7 @@ function indexRoute(req, res){
     });
 }
 function showRoute(req, res){
+  console.log(req.params);
   Picture
     .findById(req.params.id)
     .exec()
