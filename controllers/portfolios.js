@@ -15,19 +15,19 @@ function showRoute(req, res){
     .findById(req.params.id)
     .populate('creator')
     .exec()
-    .then( portfolio =>{
+    .then( (portfolio) =>{
       res.render('portfolios/show', {portfolio});
     });
 }
 function newRoute(req, res){
-  if(!res.locals.user.isHairdresser) return res.redirect('/');
+  if(!res.locals.currentUser.isHairdresser) return res.redirect('/');
   res.render('portfolios/new');
 }
 // locals.isLoggedIn && locals.user.isHairdresser
 
 function createRoute(req, res){
   const portfolioData = req.body;
-  portfolioData['creator'] = res.locals.user.id;
+  portfolioData['creator'] = res.locals.currentUser.id;
   Portfolio
     .create(req.body)
     .then( portfolio =>{
@@ -67,8 +67,18 @@ function createCommentRoute(req, res){
     .findById(req.params.id)
     .exec()
     .then(portfolio => {
-      portfolio.comments.create(req.body);
+      portfolio.comments.push(req.body);
+      portfolio.save();
       return res.redirect(`/portfolios/${portfolio.id}`);
+    });
+}
+
+function deleteCommentRoute(req, res){
+  Portfolio
+    .findById(req.params.id)
+    .then( portfolio =>{
+      portfolio.remove();
+      return res.redirect('/portfolios');
     });
 }
 module.exports = {
@@ -79,5 +89,6 @@ module.exports = {
   edit: editRoute,
   update: updateRoute,
   delete: deleteRoute,
-  createComment: createCommentRoute
+  createComment: createCommentRoute,
+  deleteComment: createCommentRoute
 };

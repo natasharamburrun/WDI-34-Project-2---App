@@ -11,21 +11,31 @@
       </ul>
 
       <% if(locals.isLoggedIn){%>
-        <% console.log(locals.currentUser.email);%>
-        <% console.log(portfolio.creator.email);%>
         <% if ((locals.currentUser.email === portfolio.creator.email)){%>
-      <a href="/portfolios/<%= portfolio.id %>/edit">Edit</a>
-      <form action="/portfolios/<%= portfolio.id %>" method="post">
-        <input type="hidden" name="_method" value="DELETE">
-        <button name="button">Delete Profile</button>
-      </form>
-      <% } %>
+        <a href="/portfolios/<%= portfolio.id %>/edit">Edit</a>
+        <form action="/portfolios/<%= portfolio.id %>" method="post">
+          <input type="hidden" name="_method" value="DELETE">
+          <button name="button">Delete Profile</button>
+        </form>
+        <% } %>
       <% } %>
 
       <form class="" action="/portfolios/<%= portfolio.id %>/comment" method="post">
         <textarea name="content" rows="8" cols="80"></textarea>
-        <button name="button">Post a comment</button>
+        <button name="button">Post comment</button>
       </form>
+
+        <% console.log(portfolio.comments) %>
+        <% portfolio.comments.forEach((comment) => { %>
+          <article class="media">
+            <div class="media-content">
+                  <div class="media-comment">
+                    <div class="comment"><%= comment.content %>
+                    </div>
+                  </div>
+            </div>
+          </article>
+        <% }) %>
     </div>
   </div>
 </div>
