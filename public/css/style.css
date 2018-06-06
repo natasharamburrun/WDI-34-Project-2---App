@@ -26,9 +26,6 @@ body {
   border: solid red 1p;
   max-width: 200px; }
 
-.section {
-  padding-left: 0px; }
-
 .container-hairSection img {
   border: solid yellow 1px; }
 
@@ -36,7 +33,7 @@ body {
   border: solid green 1px; }
 
 .card-image img {
-  display: flex;
+  display: inline-block;
   border: solid grey 1px;
   height: 250px; }
 

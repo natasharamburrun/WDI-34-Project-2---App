@@ -4,11 +4,15 @@
       <img src='<%= values[1].url %>' alt='<%= values[1].title %>'>
     </div>
     <div class="column is-half">
+      <section class="section">
+        <div class="container-description">
       <ul>
         <li><strong>Name: </strong> <%= values[1].name %> </li>
         <li><strong>Stylist price from:</strong> <%= values[1].price %> </li>
         <li><strong>About the stylist:</strong> <%= values[1].about %> </li>
       </ul>
+    </div>
+  </div>
 
       <% if(locals.isLoggedIn){%>
         <% if ((locals.currentUser.email === values[1].creator.email)){%>
@@ -19,12 +23,14 @@
         </form>
         <% } %>
       <% } %>
-        <a href="/pictures/new">Add a picture</a>
     </div>
   </div>
   </div>
     <section class="section">
       <div class="container-smallImg">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is- 3by4">
         <h1 class="title">Portfolio</h1>
           <% console.log('values 0 ', values[0]); %>
           <% values[0].forEach( picture =>{ %>
@@ -34,6 +40,10 @@
                 <%= picture.creator.username %>
           <% } %>
           <% }) %>
+          <a href="/pictures/new">Add a picture</a>
+        </div>
+      </div>
+      </div>
       </div>
     </section>
 
