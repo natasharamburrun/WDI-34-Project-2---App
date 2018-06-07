@@ -1,23 +1,24 @@
 <div class= "container-largeImg">
   <div class="columns">
     <div class="column is-half">
-      <img src='<%= values[1].url %>' alt='<%= values[1].title %>'>
+      <img src='<%= portfolio.url %>' alt='<%= portfolio.title %>'>
     </div>
     <div class="column is-half">
       <section class="section">
         <div class="container-description">
       <ul>
-        <li><strong>Name: </strong> <%= values[1].name %> </li>
-        <li><strong>Stylist price from:</strong> <%= values[1].price %> </li>
-        <li><strong>About the stylist:</strong> <%= values[1].about %> </li>
+        <li><strong>Name: </strong> <%= portfolio.name %> </li>
+        <li><strong>Stylist price from:</strong> <%= portfolio.price %> </li>
+        <li><strong>About the stylist:</strong> <%= portfolio.about %> </li>
       </ul>
     </div>
   </div>
 
       <% if(locals.isLoggedIn){%>
-        <% if ((locals.currentUser.email === values[1].creator.email)){%>
-        <a href="/portfolios/<%= values[1].id %>/edit">Edit</a>
-        <form action="/portfolios/<%= values[1].id %>" method="post">
+        <p><%= typeof(portfolio.email)%></p>
+        <% if ((locals.currentUser.email === portfolio.email)){%>
+        <a href="/portfolios/<%= portfolio.id %>/edit">Edit</a>
+        <form action="/portfolios/<%= portfolio.id %>" method="post">
           <input type="hidden" name="_method" value="DELETE">
           <button name="button">Delete Profile</button>
         </form>
@@ -25,41 +26,39 @@
       <% } %>
     </div>
   </div>
-  </div>
+
     <section class="section">
       <div class="container-smallImg">
         <div class="card">
           <div class="card-image">
             <figure class="image is- 3by4">
-        <h1 class="title">Portfolio</h1>
-          <% console.log('values 0 ', values[0]); %>
-          <% values[0].forEach( picture =>{ %>
-            <a href='/pictures/<%= picture.id %>'></a>
-            <img style="max-width: 200px; max-height: 200px " src='<%= picture.url %>' alt='<%= picture.title %>' />
-            <% if(picture.creator){%>
-                <%= picture.creator.username %>
-          <% } %>
-          <% }) %>
-          <a href="/pictures/new">Add a picture</a>
+              <h1 class="title">Portfolio</h1>
+                  <% pictures.forEach( picture =>{ %>
+                    <% if ((locals.currentUser.id === picture.creator.toString())){%>
+                      <a href='/pictures/<%= picture.id %>'></a>
+                      <img style="max-width: 200px; max-height: 200px " src='<%= picture.url %>' alt='<%= picture.title %>' />
+                      <% } %>
+                  <% }) %>
+              </figure>
+            <a href="/pictures/new">Add a picture</a>
+          </div>
         </div>
-      </div>
-      </div>
       </div>
     </section>
 
-    <form class="sectionComments" action="/portfolios/<%= values[1].id %>/comment" method="post">
+    <form class="sectionComments" action="/portfolios/<%= portfolio.id %>/comment" method="post">
       <textarea name="content" rows="8" cols="80"></textarea>
       <button name="button">Post comment</button>
     </form>
 
     <article class="media-content">
       <div = class="content">
-        <% values[1].comments.forEach((comment) => { %>
+        <% portfolio.comments.forEach((comment) => { %>
           <div class="comment"><%= comment.content %>
-          <form class="" action="/portfolios/<%= values[1].id %>/comment/<%= comment.id%>" method="post">
-          <input type="hidden" name="_method" value="DELETE">
-          <button name="button">Delete comment</button>
-          </form>
+            <form class="" action="/portfolios/<%= portfolio.id %>/comment/<%= comment.id%>" method="post">
+              <input type="hidden" name="_method" value="DELETE">
+              <button name="button">Delete comment</button>
+            </form>
           </div>
           <% }) %>
         </div>

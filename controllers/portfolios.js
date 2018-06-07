@@ -17,8 +17,11 @@ function showRoute(req, res){
   //   .populate('creator');
   Promise.all([Picture.find(), Portfolio.findById(req.params.id)])
     .then((values)=> {
-      //console.log('values should be here:', values);
-      res.render('portfolios/show', {values});
+      console.log('values should be here:', values[0][0]);
+      res.render('portfolios/show', {
+        pictures: values[0],
+        portfolio: values[1]
+      });
     });
 
   // Portfolio
