@@ -22,3 +22,5 @@ Achieved the main requirements to showcase images for hairstyles however I would
 - "add a picture" link to only show up on the hairdressers login page
 - about page
 - like and follow
+
+change for deployment 
