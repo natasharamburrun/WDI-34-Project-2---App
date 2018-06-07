@@ -39,21 +39,24 @@
     </div>
   </div>
 
-
-    <form class="sectionComments" action="/portfolios/<%= portfolio.id %>/comment" method="post">
-      <textarea name="content" rows="8" cols="80"></textarea>
-      <button name="button">Post comment</button>
-    </form>
-
-    <article class="media-content">
-      <div = class="content">
-        <% portfolio.comments.forEach((comment) => { %>
-          <div class="comment"><%= comment.content %>
-            <form class="" action="/portfolios/<%= portfolio.id %>/comment/<%= comment.id%>" method="post">
+  <section class="section">
+      <div class="container">
+        <p>Post a new comment</p>
+        <form class="sectionComments" action="/portfolios/<%= portfolio.id %>/comment" method="post">
+          <textarea name="content" rows="8" cols="80"></textarea>
+          <button name="button">Post comment</button>
+        </form>
+        <article class="media-content">
+          <div = class="content">
+            <% portfolio.comments.forEach((comment) => { %>
+              <div class="comment"><%= comment.content %>
+              <form class="" action="/portfolios/<%= portfolio.id %>/comment/<%= comment.id%>" method="post">
               <input type="hidden" name="_method" value="DELETE">
               <button name="button">Delete comment</button>
-            </form>
-          </div>
-          <% }) %>
-        </div>
-      </article>
+              </form>
+              </div>
+              <% }) %>
+            </div>
+          </article>
+      </div>
+    </section>

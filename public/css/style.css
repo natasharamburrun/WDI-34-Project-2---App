@@ -19,9 +19,6 @@ body {
 .container ul li {
   color: grey; }
 
-.container-hairSection img {
-  border: solid yellow 1px; }
-
 .section-grid {
   display: inline-block; }
 
@@ -34,23 +31,28 @@ body {
   border: solid grey 1px;
   height: 250px; }
 
-.container-smallImg h1 {
-  color: grey;
-  margin-left: 10px;
-  margin-top: 20px; }
-
-.container-smallImg a {
-  margin-left: 10px; }
-
-.container-largeImg img {
-  border: solid grey 1px; }
-
 .container-smallImg img {
   width: 200px;
   height: 200px;
   margin: 10px 10px;
   padding-left: 2px;
   padding-right: 2px; }
+
+.container-largeImg img {
+  border: solid grey 1px; }
+
+.container-smallImg h1 {
+  color: grey;
+  margin-left: 10px;
+  margin-top: 20px; }
+
+.container-smallImg a {
+  margin-left: 10px;
+  margin-top: 20px; }
+
+.container-hairSection img {
+  height: 500px;
+  width: 500px; }
 
 .media-name p {
   margin: 5px; }
