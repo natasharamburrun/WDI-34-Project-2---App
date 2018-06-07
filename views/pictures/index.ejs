@@ -1,19 +1,13 @@
-
-  <div class="column is-one-quarter is-multiline">
-    <section class="section-grid">
-      <div class="container-gridLayout">
-          <% pictures.forEach( picture =>{ %>
-            <ul>
-            <li>
-            <div class="card-hairPage">
-              <figure class="image is-256x256">
-                <a href='/pictures/<%= picture.id %>'> <%= picture.title %></a>
-                <img style="max-width: 250px; max-height: 250px " src='<%= picture.url %>' alt='<%= picture.title %>'
-                </figure>
-            </div>
-            </li>
-            </ul>
-          <% }) %>
-      </div>
-    </section>
+  <div class= "columns is-multiline">
+    <% pictures.forEach( picture =>{ %>
+      <div class="card">
+        <div class="card-imageInx">
+          <figure class="image is-256x256">
+            <a href='/pictures/<%= picture.id %>'>
+            <img style="max-width: 250px; max-height: 250px " src='<%= picture.url %>' alt='<%= picture.title %>'
+            </a>
+          </figure>
+          </div>
+        </div>
+    <% }) %>
   </div>

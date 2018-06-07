@@ -25,24 +25,19 @@
     </div>
   </div>
 </div>
-    <section class="section">
-      <div class="container-smallImg">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is- 3by4">
-              <h1 class="title">Portfolio</h1>
-                  <% pictures.forEach( picture =>{ %>
-                    <% if ((portfolio.creator.toString() === picture.creator.toString())){%>
-                      <a href='/pictures/<%= picture.id %>'></a>
-                      <img style="max-width: 200px; max-height: 200px " src='<%= picture.url %>' alt='<%= picture.title %>' />
-                      <% } %>
-                  <% }) %>
-              </figure>
-            <a href="/pictures/new">Add a picture</a>
-          </div>
-        </div>
-      </div>
-    </section>
+  <div class= "columns is-multiline">
+    <div class="container-smallImg">
+        <h1 class="title">Portfolio</h1>
+          <% pictures.forEach( picture =>{ %>
+            <% if ((portfolio.creator.toString() === picture.creator.toString())){%>
+              <a href='/pictures/<%= picture.id %>'></a>
+              <img style="max-width: 200px; max-height: 200px " src='<%= picture.url %>' alt='<%= picture.title %>' />
+            <% } %>
+          <% }) %>
+          <br>
+        <a href="/pictures/new">Add a picture</a>
+    </div>
+  </div>
 
     <form class="sectionComments" action="/portfolios/<%= portfolio.id %>/comment" method="post">
       <textarea name="content" rows="8" cols="80"></textarea>

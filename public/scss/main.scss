@@ -9,7 +9,6 @@ body{
 
 .hero-body {
   background: url('https://i.imgur.com/JEKVrdS.jpg?1') 50% no-repeat;
-  // background: url('https://i.pinimg.com/564x/e1/60/76/e1607688d972adadd0196dd1e3d600b5.jpg') 50% no-repeat;
   background-size: cover;
   text-align: center;
   display: flex;
@@ -26,34 +25,39 @@ body{
   color: grey;
 }
 
-.container-largeImg img{
-  border: solid blue 1px;
-}
 
-.container-smallImg img{
-  border: solid red 1p;
-  max-width: 200px;
-}
 
 
 .container-hairSection img {
   border: solid yellow 1px;
 }
 
-.container-gridLayout img {
-  border: solid green 1px;
-  display: grid;
-}
-
 .section-grid {
   display: inline-block;
 }
-
-.card-image img {
+//styling picture page (index of hairstyles)
+.card-imageInx img{
+  border: none;
   display: inline-block;
+  margin: 10px 20px;
+}
+//styling the portfolio page(index of portfolios)
+.card-image img{
   border: solid grey 1px;
   height: 250px;
-    // height: 100%;
+}
+//styling portfolio hairdresser page
+.container-largeImg img{
+  border: solid grey 1px;
+}
+
+//styling hairpics for each hairdresser
+.container-smallImg img{
+  width: 200px;
+  height: 200px;
+  margin: 10px 10px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .media-name p {
@@ -65,7 +69,7 @@ body{
 }
 
 .comment {
-  border: solid grey 1px;
+  border: grey 1px;
 }
 
 .sectionComments{
