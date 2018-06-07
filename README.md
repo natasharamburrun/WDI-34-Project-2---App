@@ -14,13 +14,10 @@ Created 3 models which included Users, portfolio and picture. Application is ful
 #### planned features
 
 Achieved the main requirements to showcase images for hairstyles however I would like to aim to add additional features including
-- An input field to include the name and email of the person who leaves a comment
+- An input field to include the name and email of the person who leaves a comment - currently not active
 - Star rating system  
 - Google maps as an API
 - Booking system
-- Information on the styles of hair and feature a search button to enable clients to search for what look they would like to achieve.
-- "add a picture" link to only show up on the hairdressers login page
-- about page
+- Information on the styles of hair
+- feature a search button to enable clients to search for what look they would like to achieve.
 - like and follow
-
-change for deployment 

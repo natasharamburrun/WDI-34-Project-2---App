@@ -11,8 +11,10 @@
             <li><strong>Stylist price from:</strong> <%= portfolio.price %> </li>
             <li><strong>About the stylist:</strong> <%= portfolio.about %> </li>
           </ul>
+        <div class="stylistControls">
           <% if(locals.isLoggedIn){%>
             <% if ((locals.currentUser.email === portfolio.email)){%>
+              <br><p>User Admin Controls:</p>
               <a href="/portfolios/<%= portfolio.id %>/edit">Edit your portfolio information</a><br>
               <a href="/pictures/new">Add a picture to your portfolio</a>
               <form action="/portfolios/<%= portfolio.id %>" method="post">
@@ -21,6 +23,7 @@
               </form>
             <% } %>
           <% } %>
+        </div>
         </div>
     </div>
   </div>
@@ -41,7 +44,7 @@
 
   <section class="section">
       <div class="container">
-        <p>Post a new comment</p>
+        <p>Post a comment</p>
         <div class="contact">
         <div class="field">
           <label class="label">Name</label>

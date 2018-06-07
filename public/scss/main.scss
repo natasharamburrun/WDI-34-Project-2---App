@@ -6,9 +6,14 @@ body{
   font-weight: bold;
 }
 
-.contact{
-  width: 300px;
+.stylistControls p{
+  color: red;
 }
+
+.stylistControls button{
+  color: red;
+}
+
 
 .container-about h2{
   font-size: 30px;
@@ -92,9 +97,16 @@ body{
   margin: 5px;
 }
 //comment section
-.comment {
-  border: grey 1px;
-}
+
 .sectionComments{
   display: inline-block;
+}
+
+.media-content{
+  border: fine grey;
+  width: 300px;
+}
+
+.contact{
+  width: 300px;
 }
