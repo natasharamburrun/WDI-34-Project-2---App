@@ -6,27 +6,25 @@
     <div class="column is-half">
       <section class="section">
         <div class="container-description">
-      <ul>
-        <li><strong>Name: </strong> <%= portfolio.name %> </li>
-        <li><strong>Stylist price from:</strong> <%= portfolio.price %> </li>
-        <li><strong>About the stylist:</strong> <%= portfolio.about %> </li>
-      </ul>
-      <% if(locals.isLoggedIn){%>
-        <p><%= typeof(portfolio.email)%></p>
-        <% if ((locals.currentUser.email === portfolio.email)){%>
-          <a href="/portfolios/<%= portfolio.id %>/edit">Edit</a>
-          <form action="/portfolios/<%= portfolio.id %>" method="post">
-          <input type="hidden" name="_method" value="DELETE">
-          <button name="button">Delete Profile</button>
-          </form>
+          <ul>
+            <li><strong>Name: </strong> <%= portfolio.name %> </li>
+            <li><strong>Stylist price from:</strong> <%= portfolio.price %> </li>
+            <li><strong>About the stylist:</strong> <%= portfolio.about %> </li>
+          </ul>
+          <% if(locals.isLoggedIn){%>
+            <p><%= typeof(portfolio.email)%></p>
+            <% if ((locals.currentUser.email === portfolio.email)){%>
+              <a href="/portfolios/<%= portfolio.id %>/edit">Edit</a>
+              <form action="/portfolios/<%= portfolio.id %>" method="post">
+                <input type="hidden" name="_method" value="DELETE">
+                <button name="button">Delete Profile</button>
+              </form>
+            <% } %>
           <% } %>
-          <% } %>
+        </div>
     </div>
   </div>
-
-    </div>
-  </div>
-
+</div>
     <section class="section">
       <div class="container-smallImg">
         <div class="card">
@@ -34,7 +32,7 @@
             <figure class="image is- 3by4">
               <h1 class="title">Portfolio</h1>
                   <% pictures.forEach( picture =>{ %>
-                    <% if ((locals.currentUser.id === picture.creator.toString())){%>
+                    <% if ((portfolio.creator.toString() === picture.creator.toString())){%>
                       <a href='/pictures/<%= picture.id %>'></a>
                       <img style="max-width: 200px; max-height: 200px " src='<%= picture.url %>' alt='<%= picture.title %>' />
                       <% } %>
