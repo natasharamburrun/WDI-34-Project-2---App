@@ -11,19 +11,19 @@
         <li><strong>Stylist price from:</strong> <%= portfolio.price %> </li>
         <li><strong>About the stylist:</strong> <%= portfolio.about %> </li>
       </ul>
-    </div>
-  </div>
-
       <% if(locals.isLoggedIn){%>
         <p><%= typeof(portfolio.email)%></p>
         <% if ((locals.currentUser.email === portfolio.email)){%>
-        <a href="/portfolios/<%= portfolio.id %>/edit">Edit</a>
-        <form action="/portfolios/<%= portfolio.id %>" method="post">
+          <a href="/portfolios/<%= portfolio.id %>/edit">Edit</a>
+          <form action="/portfolios/<%= portfolio.id %>" method="post">
           <input type="hidden" name="_method" value="DELETE">
           <button name="button">Delete Profile</button>
-        </form>
-        <% } %>
-      <% } %>
+          </form>
+          <% } %>
+          <% } %>
+    </div>
+  </div>
+
     </div>
   </div>
 
