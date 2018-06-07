@@ -12,9 +12,9 @@
             <li><strong>About the stylist:</strong> <%= portfolio.about %> </li>
           </ul>
           <% if(locals.isLoggedIn){%>
-            <p><%= typeof(portfolio.email)%></p>
             <% if ((locals.currentUser.email === portfolio.email)){%>
-              <a href="/portfolios/<%= portfolio.id %>/edit">Edit</a>
+              <a href="/portfolios/<%= portfolio.id %>/edit">Edit your portfolio information</a><br>
+              <a href="/pictures/new">Add a picture to your portfolio</a>
               <form action="/portfolios/<%= portfolio.id %>" method="post">
                 <input type="hidden" name="_method" value="DELETE">
                 <button name="button">Delete Profile</button>
@@ -35,7 +35,6 @@
             <% } %>
           <% }) %>
           <br>
-        <a href="/pictures/new">Add a picture</a>
     </div>
   </div>
 
