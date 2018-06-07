@@ -27,7 +27,6 @@ body{
 }
 
 .container-largeImg img{
-
   border: solid blue 1px;
 }
 
@@ -36,8 +35,6 @@ body{
   max-width: 200px;
 }
 
-.section {
-}
 
 .container-hairSection img {
   border: solid yellow 1px;
@@ -45,17 +42,18 @@ body{
 
 .container-gridLayout img {
   border: solid green 1px;
-  // display: inline;
+  display: grid;
+}
 
-
-
+.section-grid {
+  display: inline-block;
 }
 
 .card-image img {
   display: inline-block;
   border: solid grey 1px;
   height: 250px;
-  // height: 100%;
+    // height: 100%;
 }
 
 .media-name p {

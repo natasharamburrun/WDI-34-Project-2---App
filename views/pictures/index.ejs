@@ -1,23 +1,19 @@
-<div class="columns is-multiline">
-  <div class="column is-one-quarter">
-    <section class="section">
+
+  <div class="column is-one-quarter is-multiline">
+    <section class="section-grid">
       <div class="container-gridLayout">
-        <ul>
           <% pictures.forEach( picture =>{ %>
+            <ul>
             <li>
             <div class="card-hairPage">
               <figure class="image is-256x256">
                 <a href='/pictures/<%= picture.id %>'> <%= picture.title %></a>
                 <img style="max-width: 250px; max-height: 250px " src='<%= picture.url %>' alt='<%= picture.title %>'
+                </figure>
             </div>
-            </figure>
-            <% if(picture.creator){%>
-              <%= picture.creator.username %>
-              <% } %>
-              </li>
+            </li>
+            </ul>
           <% }) %>
-        </ul>
       </div>
     </section>
   </div>
-</div>
