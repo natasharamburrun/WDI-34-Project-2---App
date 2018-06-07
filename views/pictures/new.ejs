@@ -1,11 +1,33 @@
 <form action="/pictures" method="post">
-    <div>
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title">
+  <div class="field">
+    <label class="label">Stylist Name</label>
+    <div class="control">
+      <input class="input" type="text" name="name" id="name">
     </div>
-    <div>
-        <label for="url">Url</label>
-        <input type="url" name="url" id="url">
+  </div>
+  <div class="field">
+    <label class="label">Salon Name</label>
+    <div class="control">
+      <input class="input" type="text" name="salon" id="salon" >
+    </div>
+  </div>
+    <div class="field">
+      <label class="label">Image</label>
+      <div class="control">
+        <input class="input" type="text" name="url" id="url">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Styles</label>
+      <div class="styles">
+        <input class="input" type="text" name="styles" id="styles">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Products</label>
+      <div class="styles">
+        <input class="input" type="text" name="products" id="products">
+      </div>
     </div>
     <div>
       <button name="button">Submit</button>

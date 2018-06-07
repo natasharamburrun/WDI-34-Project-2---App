@@ -30,8 +30,9 @@
         <h1 class="title">Portfolio</h1>
           <% pictures.forEach( picture =>{ %>
             <% if ((portfolio.creator.toString() === picture.creator.toString())){%>
-              <a href='/pictures/<%= picture.id %>'></a>
+              <a href='/pictures/<%= picture.id %>'>
               <img style="max-width: 200px; max-height: 200px " src='<%= picture.url %>' alt='<%= picture.title %>' />
+              </a>
             <% } %>
           <% }) %>
           <br>
@@ -41,6 +42,20 @@
   <section class="section">
       <div class="container">
         <p>Post a new comment</p>
+        <div class="contact">
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control">
+          <input class="input" type="text" placeholder="e.g Alex Smith">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control">
+          <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+        </div>
+      </div>
+      </div><br>
         <form class="sectionComments" action="/portfolios/<%= portfolio.id %>/comment" method="post">
           <textarea name="content" rows="8" cols="80"></textarea>
           <button name="button">Post comment</button>
@@ -49,10 +64,10 @@
           <div = class="content">
             <% portfolio.comments.forEach((comment) => { %>
               <div class="comment"><%= comment.content %>
-              <form class="" action="/portfolios/<%= portfolio.id %>/comment/<%= comment.id%>" method="post">
-              <input type="hidden" name="_method" value="DELETE">
-              <button name="button">Delete comment</button>
-              </form>
+                <form class="" action="/portfolios/<%= portfolio.id %>/comment/<%= comment.id%>" method="post">
+                  <input type="hidden" name="_method" value="DELETE">
+                  <button name="button">Delete comment</button>
+                </form>
               </div>
               <% }) %>
             </div>
