@@ -11,17 +11,25 @@
             <li><strong>Stylist price from:</strong> <%= portfolio.price %> </li>
             <li><strong>About the stylist:</strong> <%= portfolio.about %> </li>
           </ul>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container-userProfile">
+          <ul>
           <% if(locals.isLoggedIn){%>
-            <p><%= typeof(portfolio.email)%></p>
             <% if ((locals.currentUser.email === portfolio.email)){%>
-              <a href="/portfolios/<%= portfolio.id %>/edit">Edit</a>
+              <p>User Admin Controls:</p>
+              <a href="/pictures/new">Add a picture to your portfolio</a><br>
+              <a href="/portfolios/<%= portfolio.id %>/edit">Edit your portfolio information</a>
               <form action="/portfolios/<%= portfolio.id %>" method="post">
                 <input type="hidden" name="_method" value="DELETE">
                 <button name="button">Delete Profile</button>
               </form>
             <% } %>
           <% } %>
+          </ul>
         </div>
+      </section>
     </div>
   </div>
 </div>
@@ -30,18 +38,30 @@
         <h1 class="title">Portfolio</h1>
           <% pictures.forEach( picture =>{ %>
             <% if ((portfolio.creator.toString() === picture.creator.toString())){%>
-              <a href='/pictures/<%= picture.id %>'></a>
+              <a href='/pictures/<%= picture.id %>'>
               <img style="max-width: 200px; max-height: 200px " src='<%= picture.url %>' alt='<%= picture.title %>' />
+              </a>
             <% } %>
           <% }) %>
-          <br>
-        <a href="/pictures/new">Add a picture</a>
     </div>
   </div>
 
   <section class="section">
       <div class="container">
         <p>Post a new comment</p>
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="e.g Alex Smith">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control">
+            <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+          </div>
+        </div>
         <form class="sectionComments" action="/portfolios/<%= portfolio.id %>/comment" method="post">
           <textarea name="content" rows="8" cols="80"></textarea>
           <button name="button">Post comment</button>

@@ -1,6 +1,16 @@
 body {
   font-family: 'Antic Didone', serif; }
 
+.container-about h3 {
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center; }
+
+.container-about h4 {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center; }
+
 .subtitle {
   font-size: 50px;
   font-weight: bolder; }
@@ -30,6 +40,9 @@ body {
 .card-image img {
   border: solid grey 1px;
   height: 250px; }
+
+.container-userProfile button {
+  color: red; }
 
 .container-smallImg img {
   width: 200px;
@@ -65,5 +78,8 @@ body {
 
 .sectionComments {
   display: inline-block; }
+
+.field {
+  width: 300px; }
 
 /*# sourceMappingURL=style.css.map */

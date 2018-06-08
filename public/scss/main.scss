@@ -2,10 +2,25 @@ body{
   font-family: 'Antic Didone', serif;
 }
 
+//styling about page
+.container-about h3{
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+}
+
+.container-about h4{
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
 .subtitle{
   font-size: 50px;
   font-weight: bolder;
 }
+
+//styling home page
 
 .hero-body {
   background: url('https://i.imgur.com/JEKVrdS.jpg?1') 50% no-repeat;
@@ -28,7 +43,7 @@ body{
 .section-grid {
   display: inline-block;
 }
-//styling picture page (index of hairstyles)
+//styling for picture page (index of hairstyles)
 .card-imageInx img{
   border: none;
   display: inline-block;
@@ -39,6 +54,11 @@ body{
   border: solid grey 1px;
   height: 250px;
 }
+
+.container-userProfile button {
+  color: red;
+}
+
 //styling hairpics for each hairdresser
 .container-smallImg img{
   width: 200px;
@@ -80,4 +100,7 @@ body{
 }
 .sectionComments{
   display: inline-block;
+}
+.field{
+  width: 300px;
 }

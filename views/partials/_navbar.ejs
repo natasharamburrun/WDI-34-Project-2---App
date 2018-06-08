@@ -11,12 +11,15 @@
   </div>
   <div class="navbar-menu" id="navMenu">
     <div class="navbar-start">
-        <a href="/login" class="navbar-item">
-          Login
-        </a>
-        <a href="/register" class="navbar-item">
-          Register
-        </a>
+      <a href="/about" class="navbar-item">
+        About
+      </a>
+      <a href="/portfolios" class="navbar-item">
+        Profiles
+      </a>
+      <a href="/pictures" class="navbar-item">
+        Hair
+      </a>
     </div>
     <% if(locals.isLoggedIn){ %>
       <a href="/logout" class="navbar-item">
@@ -29,14 +32,11 @@
       </a>
       <% } %>
     <div class="navbar-end">
-      <a href="/portfolios" class="navbar-item">
-        Profiles
+      <a href="/login" class="navbar-item">
+        Login
       </a>
-      <a href="/pictures" class="navbar-item">
-        Hair
-      </a>
-      <a href="/about" class="navbar-item">
-        About
+      <a href="/register" class="navbar-item">
+        Register
       </a>
     </div>
   </div>
