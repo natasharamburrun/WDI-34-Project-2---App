@@ -2,6 +2,12 @@ body{
   font-family: 'Antic Didone', serif;
 }
 
+//navbar-item
+.navbar-menu{
+  background-color: #50504e;
+  color: white;
+}
+
 //styling about page
 .container-about h3{
   font-weight: bold;
@@ -72,7 +78,14 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  padding: 35px 70px;
+  padding: 40px 100px;
+}
+
+.notification h2{
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 25px;
 }
 
 .notification form input {
