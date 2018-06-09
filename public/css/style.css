@@ -2,7 +2,7 @@ body {
   font-family: 'Antic Didone', serif; }
 
 .navbar-menu {
-  background-color: #50504e;
+  background-color: #f4ebe8;
   color: white; }
 
 .container-about h3 {
@@ -37,7 +37,15 @@ body {
   display: inline-block; }
 
 .section form {
-  color: red; }
+  font-weight: bold;
+  display: flex; }
+
+.container-register {
+  width: 500px;
+  display: flex;
+  display: table;
+  height: 100%;
+  margin: 0 auto; }
 
 .container-login {
   width: 500px;
@@ -48,18 +56,24 @@ body {
 
 .notification form {
   display: table-cell;
-  text-align: center;
+  text-align: left;
   vertical-align: middle;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  padding: 40px 100px; }
+  padding: 40px 150px; }
 
 .notification h2 {
   text-align: center;
   font-style: italic;
   font-weight: bold;
   font-size: 25px; }
+
+.control-label
+input[type="checkbox"] {
+  display: inline-block;
+  width: 15px;
+  vertical-align: center; }
 
 .notification form input {
   width: 300px; }
