@@ -1,14 +1,35 @@
-<% if(locals.message) { %>
-  <p><%= message %></p>
-<% } %>
-<form method="POST" action="/login">
-  <div>
-    <label for="email">Email</label>
-    <input type="text" name="email" id="email">
+<div class="container-login">
+  <div class="notification">
+  <% if(locals.message) { %>
+    <p><%= message %></p>
+    <% } %>
+    <form method="POST" action="/login">
+      <div class="field">
+        <p class="control has-icons-left has-icons-right">
+          <input class="input" type="email" type="text" name="email" placeholder="Email" id="email">
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control has-icons-left">
+          <input class="input" type="password" type="password" name="password" placeholder="Password" id= "password">
+          <span class="icon is-small is-left">
+            <i class="fas fa-lock"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field-submit">
+        <p class="control">
+          <button class="button">
+            Login
+          </button>
+        </p>
+      </div>
+    </form>
   </div>
-  <div>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password">
-  </div>
-  <button class="button">Login</button>
-</form>
+</div>

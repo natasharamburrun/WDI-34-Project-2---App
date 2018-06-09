@@ -1,7 +1,11 @@
-<h1>Welcome</h1>
-
-<% users.forEach((user) => { %>
-  <h1><%= users.username %></h1>
-  <h2><%= users.email %></h2>
-  <p><%= users.password %></p>
-<% }) %>
+<body>
+  <section class="section-login">
+    <div class="container-welcome">
+      <% users.forEach((user) => { %>
+        <h1><%= users.username %></h1>
+        <h2><%= users.email %></h2>
+        <p><%= users.password %></p>
+        <% }) %>
+    </div>
+  </section>
+</body>

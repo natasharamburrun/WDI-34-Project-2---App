@@ -43,6 +43,46 @@ body{
 .section-grid {
   display: inline-block;
 }
+
+//login pages
+
+.section form {
+  color: red;
+  // display: block;
+  // align-items: center;
+  // justify-content: center;
+}
+
+.container-login{
+  width: 500px;
+  display: flex;
+  // align-items: center;
+  // justify-content: center;
+  display:table;
+  height:100%;
+  margin:
+  0 auto;
+
+}
+
+.notification form {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 35px 70px;
+}
+
+.notification form input {
+  width: 300px;
+}
+
+.notification .field-submit button {
+  width: 300px;
+}
+
 //styling for picture page (index of hairstyles)
 .card-imageInx img{
   border: none;
