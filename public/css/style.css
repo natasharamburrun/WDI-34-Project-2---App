@@ -2,7 +2,10 @@ body {
   font-family: 'Antic Didone', serif; }
 
 .navbar-menu {
-  background-color: #f4ebe8;
+  background-color: white;
+  color: white; }
+
+#navMenu {
   color: white; }
 
 .container-about h3 {
@@ -20,12 +23,18 @@ body {
   font-weight: bolder; }
 
 .hero-body {
-  background: url("https://i.imgur.com/JEKVrdS.jpg?1") 50% no-repeat;
+  background-color: #686868;
   background-size: cover;
-  text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: -100px;
+  text-align: center;
+  font-family: 'Antic Didone', serif;
+  color: white; }
+
+.hero is-primary {
+  padding-top: 0px; }
 
 .navbar-item img {
   display: inline-flex; }
@@ -36,11 +45,32 @@ body {
 .section-grid {
   display: inline-block; }
 
+/* external css: flickity.css */
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: sans-serif; }
+
+.carousel {
+  background: #EEE; }
+
+.carousel img {
+  display: block;
+  min-height: 550px;
+  min-width: 800px; }
+
+@media screen and (min-width: 768px) {
+  .carousel img {
+    height: 400px; } }
+.section {
+  background-color: white; }
+
 .section form {
-  font-weight: bold;
-  display: flex; }
+  font-weight: bold; }
 
 .container-register {
+  background-color: #8d6c65;
   width: 500px;
   display: flex;
   display: table;
@@ -68,6 +98,9 @@ body {
   font-style: italic;
   font-weight: bold;
   font-size: 25px; }
+
+.notification button {
+  width: 300px; }
 
 .control-label
 input[type="checkbox"] {

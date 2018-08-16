@@ -3,11 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Hair App</title>
+  <!-- Flickity  -->
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+   <!-- Bulma -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Antic+Didone" rel="stylesheet">
+  <!-- font awesome icons -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+  <!-- css -->
   <link rel="stylesheet" href="/css/style.css">
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- flickity -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <!-- JS -->
   <script src="/app.js" charset="utf-8"></script>
 </head>
 
@@ -15,7 +26,7 @@
   <%- include ./partials/_navbar %>
 
   <% if(locals.isHomepage) { %>
-    <section class="hero is-primary is-fullheight">
+    <section class="hero is-primary is-medium">
       <div class="hero-body">
         <div class="container">
           <div class="hero-section-text">
