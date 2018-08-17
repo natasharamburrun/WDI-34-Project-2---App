@@ -1,4 +1,4 @@
-body{
+*{
   font-family: 'Antic Didone', serif;
 }
 
@@ -6,13 +6,23 @@ body{
 //navbar-item
 //***********
 
-.navbar-menu{
-  background-color: white;
-  color: white;
+.navbar-item{
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  img {
+    min-height: 50px;
+    min-width: 50px;
+  }
+}
+
+.nav-container {
+  border-bottom: 1px solid #cccccc;
 }
 
 #navMenu {
-  color: white;
+  background-color: white;
+  border-bottom: 1px solid #cccccc;
 }
 //******************
 //styling about page
@@ -30,10 +40,16 @@ body{
   text-align: center;
 }
 
-.subtitle{
+.container-about img {
+  margin-left: 12%;
+}
+
+.subtitle-about{
   font-size: 50px;
   font-weight: bolder;
 }
+
+
 //*****************
 //styling home page
 //*****************
@@ -44,10 +60,13 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -100px;
+  margin-top: -80px;
   text-align: center;
   font-family: 'Antic Didone', serif;
   color: white;
+  h1 {
+    padding-bottom: 20px;
+  }
 }
 
 .hero is-primary {
@@ -162,10 +181,16 @@ input[type="checkbox"] {
 .card-image img{
   border: solid grey 1px;
   height: 250px;
+  object-fit: cover
 }
 
 .container-userProfile button {
   color: red;
+}
+
+.section-portfolioIndex {
+  background-color: #f8f8f8;
+  padding-top: 100px;
 }
 
 //styling hairpics for each hairdresser

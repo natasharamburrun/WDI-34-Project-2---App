@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const static = require('../controllers/static');
+// const user = require('../controllers/user');
 const registrations = require('../controllers/registrations');
 const sessions = require('../controllers/sessions');
 const portfolios = require('../controllers/portfolios');
@@ -27,8 +27,8 @@ router.route('/portfolios')
 router.route('/portfolios/new')
   .get(portfolios.new);
 
-  router.route('/portfolios/:id/edit')
-    .get(portfolios.edit);
+router.route('/portfolios/:id/edit')
+  .get(portfolios.edit);
 
 router.route('/portfolios/:id')
   .get(portfolios.show)

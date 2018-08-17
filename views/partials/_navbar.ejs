@@ -1,15 +1,16 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="nav-container"
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://wd34hairstylistappproject.herokuapp.com/">
+      <img src="https://i.imgur.com/rUHrOk0.png?1" alt="sytlist logo">
+    </a>
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
   <div class="navbar-menu" id="navMenu">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://wd34hairstylistappproject.herokuapp.com/">
-        <img src="https://i2.wp.com/www.bondihairstylist.com.au/wp-content/uploads/stylist-logo-black.png?zoom=2&resize=892%2C615" alt="sytlist logo" width="50" height="100">
-      </a>
-      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
     <div class="navbar-start">
       <a href="/about" class="navbar-item">
         About
@@ -17,27 +18,32 @@
       <a href="/portfolios" class="navbar-item">
         Profiles
       </a>
-      <a href="/pictures" class="navbar-item">
-        Hair
-      </a>
-    </div>
-    <% if(locals.isLoggedIn){ %>
-      <a href="/logout" class="navbar-item">
-        logout
-      </a>
-      <% } %>
-    <% if(locals.isLoggedIn && locals.currentUser.isHairdresser){ %>
-      <a href="/portfolios/new" class="navbar-item">
+      <% if(locals.isLoggedIn && locals.currentUser.isHairdresser){ %>
+        <a href="/portfolios/new" class="navbar-item">
         Add New Portfolio
-      </a>
-      <% } %>
-    <div class="navbar-end">
-      <a href="/login" class="navbar-item">
-        Login
-      </a>
-      <a href="/register" class="navbar-item">
-        Register
-      </a>
+        </a>
+        <% } %>
+        <a href="/pictures" class="navbar-item">
+          Hair
+        </a>
+      </div>
+
+
+      <div class="navbar-end">
+        <a href="/login" class="navbar-item">
+          Login
+        </a>
+
+        <% if(locals.isLoggedIn){ %>
+          <a href="/logout" class="navbar-item">
+          logout
+          </a>
+          <% } %>
+
+          <a href="/register" class="navbar-item">
+            Register
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
