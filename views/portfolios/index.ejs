@@ -1,34 +1,29 @@
-<h2>Stylist Portfolio</h2>
 
 <div class="container">
+  <h2 class="stylistHeadline">Meet the stylists</h2>
   <div class="columns is-multiline">
-      <% portfolios.forEach((portfolio) => { %>
-        <div class=" column column is-one-quarter-desktop is-half-tablet">
-          <div class="column">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is- 4by3">
-                  <a href= '/portfolios/<%= portfolio.id %>'>
-                  <img style="max-width: 500px " src='<%= portfolio.url %>' alt='<%= portfolio.name %>' />
-                  </a>
-                </figure>
-                  <div class="media-name">
-                    <p class="title is-4"><%= portfolio.name %>
-                    <p class="subtitle is-4">Salon: <%= portfolio.salon %>
-                  </div>
-                  <div class="media-contact">
-                    <div class="content"><%= portfolio.address %>
-                    <div class="content"><%= portfolio.tel %>
-                    <div class="content"><%= portfolio.email %>
-                  </div>
-
-                </div>
-              </div>
+    <% portfolios.forEach((portfolio) => { %>
+      <div class=" column is-one-quarter-desktop is-half-tablet">
+        <div class="card">
+          <div class="card-image">
+          <figure class="image is- 4by3">
+          <div class="img__wrap">
+            <a href= '/portfolios/<%= portfolio.id %>'>
+            <img style="max-width: 500px " src='<%= portfolio.url %>' alt='<%= portfolio.name %>' />
+            <p class="img__description">See <%= portfolio.name %> Profile</p>
+            </a>
+          </div>
+            </figure>
+            <div class="media-name">
+              <p class="title is-6"><%= portfolio.name %>
+            </div>
+            <div class="media-info">
+              <p class="title is-6"><%= portfolio.occupation %>
+              <p class="subtitle is-6">✄: <%= portfolio.salon %>
             </div>
           </div>
         </div>
       </div>
-    </div>
     <% }) %>
   </div>
 </div>

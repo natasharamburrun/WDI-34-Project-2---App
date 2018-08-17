@@ -1,13 +1,16 @@
+<div class="container">
+  <h2 class="stylistHeadline">Latest Styles and Trends</h2>
   <div class= "columns is-multiline">
     <% pictures.forEach( picture =>{ %>
-      <div class="card">
+      <div class=" column is-one-quarter-desktop is-half-tablet">
         <div class="card-imageInx">
-          <figure class="image is-256x256">
+          <figure class="image is-square">
             <a href='/pictures/<%= picture.id %>'>
-            <img style="max-width: 250px; max-height: 250px " src='<%= picture.url %>' alt='<%= picture.title %>'
+              <img style="image is-square" src='<%= picture.url %>' alt='<%= picture.title %>'
             </a>
           </figure>
-          </div>
         </div>
-    <% }) %>
+      </div>
+      <% }) %>
+    </div>
   </div>

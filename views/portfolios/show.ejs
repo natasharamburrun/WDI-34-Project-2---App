@@ -1,61 +1,73 @@
-<div class= "container-largeImg">
-  <div class="columns">
+<div class= "container-portfolioshow">
+  <div class="columns is-multiline">
     <div class="column is-half">
       <img src='<%= portfolio.url %>' alt='<%= portfolio.title %>'>
-    </div>
-    <div class="column is-half">
       <section class="section">
         <div class="container-description">
-          <ul>
-            <li><strong>Name: </strong> <%= portfolio.name %> </li>
-            <li><strong>Stylist price from:</strong> <%= portfolio.price %> </li>
-            <li><strong>About the stylist:</strong> <%= portfolio.about %> </li>
-          </ul>
-        </div>
-      </section>
+          <h4 class="aboutstylist">A bit about <%= portfolio.name %>:</h3>
+            <ul>
+              <li><strong>Name: </strong> <%= portfolio.name %> </li>
+              <li><strong>Stylist price from: </strong> <%= portfolio.price %> </li>
+              <li><strong>About the stylist: </strong> <%= portfolio.about %> </li>
+            </ul>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container-userProfile">
+            <ul>
+              <% if(locals.isLoggedIn){%>
+                <% if ((locals.currentUser.email === portfolio.email)){%>
+                  <form>
+                  <p>User Admin Controls:</p>
+                  <a href="/pictures/new">Add a picture to your portfolio</a><br>
+                  <a href="/portfolios/<%= portfolio.id %>/edit">Edit your portfolio information</a>
+                  <form action="/portfolios/<%= portfolio.id %>" method="post">
+                  <input type="hidden" name="_method" value="DELETE">
+                  <button name="button">Delete Profile</button>
+                  </form>
+                <% } %>
+              <% } %>
+            </ul>
+          </div>
+        </section>
+      </div>
+    <div class="column is-half">
       <section class="section">
-        <div class="container-userProfile">
+        <div class="column">
+          <h4 class="aboutsalon"><%= portfolio.salon %> Salon:</h4>
           <ul>
-          <% if(locals.isLoggedIn){%>
-            <% if ((locals.currentUser.email === portfolio.email)){%>
-              <p>User Admin Controls:</p>
-              <a href="/pictures/new">Add a picture to your portfolio</a><br>
-              <a href="/portfolios/<%= portfolio.id %>/edit">Edit your portfolio information</a>
-              <form action="/portfolios/<%= portfolio.id %>" method="post">
-                <input type="hidden" name="_method" value="DELETE">
-                <button name="button">Delete Profile</button>
-              </form>
-            <% } %>
-          <% } %>
+            <li><strong>tel: </strong> <%= portfolio.tel %> </li>
+            <li><strong>email:</strong> <%= portfolio.email %> </li>
+            <li><strong>Address:</strong> <%= portfolio.address %> </li>
           </ul>
+          <h4 class="visit-map"><strong>Visit Salon:</strong></h3>
+          <div id="map" class="container"></div>
         </div>
       </section>
     </div>
   </div>
-</div>
-  <div class= "columns is-multiline">
+  <hr>
+  <section class="section">
     <div class="container-smallImg">
         <h1 class="title">Portfolio</h1>
           <% pictures.forEach( picture =>{ %>
             <% if ((portfolio.creator.toString() === picture.creator.toString())){%>
               <a href='/pictures/<%= picture.id %>'>
-              <img style="max-width: 200px; max-height: 200px " src='<%= picture.url %>' alt='<%= picture.title %>' />
+              <img src='<%= picture.url %>' alt='<%= picture.title %>' />
               </a>
             <% } %>
           <% }) %>
     </div>
-  </div>
-
+  </section>
   <section class="section">
-      <div class="container">
-        <p>Post a new comment</p>
+    <div class="container">
+      <p>Post a new comment</p>
         <div class="field">
           <label class="label">Name</label>
           <div class="control">
             <input class="input" type="text" placeholder="e.g Alex Smith">
           </div>
         </div>
-
         <div class="field">
           <label class="label">Email</label>
           <div class="control">
@@ -80,3 +92,4 @@
           </article>
       </div>
     </section>
+  </div>

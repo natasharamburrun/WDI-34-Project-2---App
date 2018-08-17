@@ -49,7 +49,6 @@
   font-weight: bolder;
 }
 
-
 //*****************
 //styling home page
 //*****************
@@ -64,9 +63,16 @@
   text-align: center;
   font-family: 'Antic Didone', serif;
   color: white;
-  h1 {
+  h2 {
     padding-bottom: 20px;
   }
+}
+
+.title-main {
+  text-align: center;
+  color: white;
+  font-size: 42px;
+  padding: 15px;
 }
 
 .hero is-primary {
@@ -82,7 +88,9 @@
   display: inline-block;
 }
 
-/* external css: flickity.css */
+//************
+//flickity.css
+//************
 
 * { box-sizing: border-box; }
 
@@ -104,7 +112,9 @@ body { font-family: sans-serif; }
   }
 }
 
+//************************
 //login/registration pages
+//************************
 
 .section {
   background-color: white;
@@ -162,7 +172,6 @@ input[type="checkbox"] {
     vertical-align: center;
 }
 
-
 .notification form input {
   width: 300px;
 }
@@ -171,17 +180,24 @@ input[type="checkbox"] {
   width: 300px;
 }
 
+//**********************************************
 //styling for picture page (index of hairstyles)
+//**********************************************
+
 .card-imageInx img{
   border: none;
   display: inline-block;
-  margin: 10px 20px;
+  margin: 20px 20px;
+  object-fit: cover;
 }
-//styling the portfolio page(index of portfolios)
+
+//********************************
+//STYLING THE INDEX PORTFOLIO PAGE
+//********************************
+
 .card-image img{
-  border: solid grey 1px;
   height: 250px;
-  object-fit: cover
+  object-fit: cover;
 }
 
 .container-userProfile button {
@@ -193,7 +209,53 @@ input[type="checkbox"] {
   padding-top: 100px;
 }
 
+.stylistHeadline {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+
+.media-name{
+  padding-top: 5px;
+  min-height: 20px;
+}
+.media-info {
+  padding: 5px;
+  min-height: 50px;
+}
+
+.img__wrap {
+  position: relative;
+}
+
+.img__description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 40%;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 20px;
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap:hover .img__description {
+  visibility: visible;
+  opacity: 0.5;
+}
+
+
+//*************************************
 //styling hairpics for each hairdresser
+//*************************************
+
 .container-smallImg img{
   width: 200px;
   height: 200px;
@@ -201,19 +263,42 @@ input[type="checkbox"] {
   padding-left: 2px;
   padding-right: 2px;
 }
-.container-largeImg img{
-  border: solid grey 1px;
+//**************************
+//portfolio hairdresser page
+//**************************
+
+.aboutstylist {
+  font-size: 18px;
+  padding-bottom: 10px;
 }
-//styling text on the portfolio hairdresser page
+
+.aboutsalon {
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
 .container-smallImg h1 {
   color: grey;
   margin-left: 10px;
   margin-top: 20px;
 }
-.container-smallImg a {
+.container-smallImg {
   margin-left: 10px;
   margin-top: 20px;
 }
+
+.container-smallImg img {
+  object-fit: cover;
+}
+
+#map {
+  width: 600px;
+  height: 400px;
+  background-color: grey;
+}
+
+
+
 
 //styling of the hair link which you can delete or edit
 .container-hairSection img {
