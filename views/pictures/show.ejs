@@ -3,11 +3,6 @@
       <div class="card-hairPage">
         <figure class="image is- 3by4">
           <img src='<%= picture.url %>' alt='<%= picture.title %>' />
-            <a href="/pictures/<%= picture.id %>/edit">Edit</a>
-            <form action="/pictures/<%= picture.id %>" method="post">
-              <input type="hidden" name="_method" value="DELETE">
-              <button name="button">Delete Profile</button>
-            </form>
         </figure>
       </div>
   </div>

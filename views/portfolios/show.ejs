@@ -49,14 +49,32 @@
   <hr>
   <section class="section">
     <div class="container-smallImg">
-        <h1 class="title">Portfolio</h1>
-          <% pictures.forEach( picture =>{ %>
-            <% if ((portfolio.creator.toString() === picture.creator.toString())){%>
+      <h1 class="title">Portfolio</h1>
+      <div class="carousel-portfolio" data-flickity='{ "autoPlay": true, "wrapAround": true }'>
+        <% pictures.forEach( picture =>{ %>
+           <div class="carousel-cell">
+          <% if ((portfolio.creator.toString() === picture.creator.toString())){%>
               <a href='/pictures/<%= picture.id %>'>
-              <img src='<%= picture.url %>' alt='<%= picture.title %>' />
+                <img src='<%= picture.url %>' alt='<%= picture.title %>' />
               </a>
-            <% } %>
-          <% }) %>
+              <div class="background-black-grunge">
+              <ul>
+                <% if(locals.isLoggedIn){%>
+                  <% if ((locals.currentUser.email === portfolio.email)){%>
+                    <form>
+                    <a href="/pictures/<%= picture.id %>/edit">Edit</a>
+                    <form action="/pictures/<%= picture.id %>" method="post">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <a class="delete">Delete Profile</a>
+                    </form>
+                  <% } %>
+                <% } %>
+              </ul>
+              </div>
+          <% } %>
+          </div>
+        <% }) %>
+      </div>
     </div>
   </section>
   <section class="section">
