@@ -25,3 +25,4 @@ Achieved the main requirements to showcase images for hairstyles however I would
 - like and follow
 - search
 change
+make small change for merging into deloyment
