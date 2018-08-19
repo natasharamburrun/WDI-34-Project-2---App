@@ -15,7 +15,7 @@ In order to reach MVP my target was to create a route for hairdressers to login 
 #### planned features
 
 Achieved the main requirements to showcase images for hairstyles however I would like to aim to add additional features including
-- An input field to include the name and email of the person who leaves a comment
+- An input field to include the name and email of the person who leaves a comment - currently not active
 - Star rating system  
 - Google maps as an API
 - Booking system
@@ -23,5 +23,5 @@ Achieved the main requirements to showcase images for hairstyles however I would
 <!-- - "add a picture" link to only show up on the hairdressers login page -->
 <!-- - about page -->
 - like and follow
-- search 
+- search
 change

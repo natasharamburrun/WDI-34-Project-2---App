@@ -1,6 +1,28 @@
 *{
   font-family: 'Antic Didone', serif;
 }
+.container-about{
+  text-align: center;
+  font-weight: bold;
+}
+
+.stylistControls p{
+  color: red;
+}
+
+.stylistControls button{
+  color: red;
+}
+
+
+.container-about h2{
+  font-size: 30px;
+}
+
+.container-about h3{
+  font-size: 25px;
+  padding-top: 10px;
+}
 
 //***********
 //navbar-item
@@ -355,12 +377,20 @@ input[type="checkbox"] {
   margin: 5px;
 }
 //comment section
-.comment {
-  border: grey 1px;
-}
+
 .sectionComments{
   display: inline-block;
 }
+<<<<<<< HEAD
 .field{
+=======
+
+.media-content{
+  border: fine grey;
+  width: 300px;
+}
+
+.contact{
+>>>>>>> deployment
   width: 300px;
 }

@@ -1,268 +1,53 @@
-* {
-  font-family: 'Antic Didone', serif; }
+/*
+Error: Invalid CSS after "  width: 300px": expected "{", was ";"
+        on line 395 of scss/main.scss
 
-.navbar-item {
-  color: black;
-  font-size: 20px;
-  font-weight: 600; }
-  .navbar-item img {
-    min-height: 50px;
-    min-width: 50px; }
+390:   width: 300px;
+391: }
+392: 
+393: .contact{
+394: >>>>>>> deployment
+395:   width: 300px;
+396: }
 
-.nav-container {
-  border-bottom: 1px solid #cccccc; }
-
-#navMenu {
-  background-color: white;
-  border-bottom: 1px solid #cccccc; }
-
-.container-about h3 {
-  font-weight: bold;
-  font-size: 25px;
-  text-align: center; }
-
-.container-about h4 {
-  font-weight: bold;
-  font-size: 18px;
-  text-align: center; }
-
-.container-about img {
-  margin-left: 12%; }
-
-.subtitle-about {
-  font-size: 50px;
-  font-weight: bolder; }
-
-.hero-body {
-  background-color: #686868;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: -80px;
-  text-align: center;
-  font-family: 'Antic Didone', serif;
-  color: white; }
-  .hero-body h2 {
-    padding-bottom: 20px; }
-
-.title-main {
-  text-align: center;
-  color: white;
-  font-size: 42px;
-  padding: 15px; }
-
-.hero is-primary {
-  padding-top: 0px; }
-
-.navbar-item img {
-  display: inline-flex; }
-
-.container ul li {
-  color: grey; }
-
-.section-grid {
-  display: inline-block; }
-
-* {
-  box-sizing: border-box; }
-
-body {
-  font-family: sans-serif; }
-
-.carousel {
-  background: #EEE; }
-
-.carousel img {
-  display: block;
-  min-height: 550px;
-  min-width: 800px; }
-
-@media screen and (min-width: 768px) {
-  .carousel img {
-    height: 400px; } }
-.carousel-portfolio img {
-  display: block;
-  min-height: 250px;
-  min-width: 250px; }
-
-.carousel-portfolio {
-  background: #EEE; }
-
-.section {
-  background-color: white; }
-
-.section form {
-  font-weight: bold; }
-
-.container-register {
-  background-color: #8d6c65;
-  width: 500px;
-  display: flex;
-  display: table;
-  height: 100%;
-  margin: 0 auto; }
-
-.container-login {
-  width: 500px;
-  display: flex;
-  display: table;
-  height: 100%;
-  margin: 0 auto; }
-
-.notification form {
-  display: table-cell;
-  text-align: left;
-  vertical-align: middle;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  padding: 40px 150px; }
-
-.notification h2 {
-  text-align: center;
-  font-style: italic;
-  font-weight: bold;
-  font-size: 25px; }
-
-.notification button {
-  width: 300px; }
-
-.control-label
-input[type="checkbox"] {
-  display: inline-block;
-  width: 15px;
-  vertical-align: center; }
-
-.notification form input {
-  width: 300px; }
-
-.notification .field-submit button {
-  width: 300px; }
-
-.container-newPortfolio {
-  background-color: #8d6c65;
-  width: 500px;
-  display: flex;
-  display: table;
-  height: 100%;
-  margin: 0 auto; }
-
-.control-cancel {
-  align-items: center; }
-
-.card-imageInx img {
-  border: none;
-  display: inline-block;
-  margin: 20px 20px;
-  object-fit: cover; }
-
-.card-image img {
-  height: 250px;
-  object-fit: cover; }
-
-.container-userProfile button {
-  color: red; }
-
-.section-portfolioIndex {
-  background-color: #f8f8f8;
-  padding-top: 100px; }
-
-.stylistHeadline {
-  text-align: center;
-  font-size: 22px;
-  font-weight: 600;
-  padding-bottom: 15px; }
-
-.media-name {
-  padding-top: 5px;
-  min-height: 20px; }
-
-.media-info {
-  padding: 5px;
-  min-height: 50px; }
-
-.img__wrap {
-  position: relative; }
-
-.img__description {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: black;
-  color: #fff;
-  font-weight: 500;
-  text-align: center;
-  padding-top: 40%;
-  visibility: hidden;
-  opacity: 0;
-  font-size: 20px;
-  transition: opacity .2s, visibility .2s; }
-
-.img__wrap:hover .img__description {
-  visibility: visible;
-  opacity: 0.5; }
-
-.container-smallImg img {
-  width: 200px;
-  height: 200px;
-  margin: 10px 10px;
-  padding-left: 2px;
-  padding-right: 2px; }
-
-.aboutstylist {
-  font-size: 18px;
-  padding-bottom: 10px; }
-
-.aboutsalon {
-  font-size: 18px;
-  padding-bottom: 10px; }
-
-.container-smallImg h1 {
-  color: grey;
-  margin-left: 10px;
-  margin-top: 20px; }
-
-.container-smallImg {
-  margin-left: 10px;
-  margin-top: 20px; }
-
-.container-smallImg img {
-  object-fit: cover; }
-
-#map {
-  width: 500px;
-  height: 400px;
-  background-color: grey;
-  margin-top: 50px; }
-
-.container-hairSection {
-  display: inline-flex; }
-
-.container-hairSection img {
-  height: 500px;
-  width: 500px;
-  object-fit: cover; }
-
-.card-media {
-  min-width: 500px;
-  padding-left: 100px; }
-
-.media-name p {
-  margin: 5px; }
-
-.media-contact {
-  margin: 5px; }
-
-.comment {
-  border: grey 1px; }
-
-.sectionComments {
-  display: inline-block; }
-
-.field {
-  width: 300px; }
-
-/*# sourceMappingURL=style.css.map */
+Backtrace:
+scss/main.scss:395
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:1278:in `expected'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:1208:in `expected'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:1203:in `tok!'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:677:in `block'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:697:in `block_child'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:686:in `block_contents'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:678:in `block'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:697:in `block_child'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:689:in `block_contents'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:678:in `block'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:670:in `ruleset'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:696:in `block_child'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:689:in `block_contents'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:137:in `stylesheet'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:41:in `parse'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:414:in `_to_tree'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:320:in `block in watch'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"  width: 300px\": expected \"{\", was \";\"\A         on line 395 of scss/main.scss\A \A 390:   width: 300px;\A 391: }\A 392: \A 393: .contact{\A 394: >>>>>>> deployment\A 395:   width: 300px;\A 396: }"; }
