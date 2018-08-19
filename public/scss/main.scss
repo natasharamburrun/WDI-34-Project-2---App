@@ -2,7 +2,6 @@
   font-family: 'Antic Didone', serif;
 }
 
-
 //***********
 //NAVBAR
 //***********
@@ -35,43 +34,16 @@
   font-weight: bold;
 }
 
-.stylistControls p{
-  color: red;
-}
-
-.stylistControls button{
-  color: red;
-}
-
-
 .container-about h2{
   font-size: 30px;
 }
 
+
 .container-about h3{
-  font-size: 25px;
   padding-top: 10px;
-}
-
-.container-about h3{
   font-weight: bold;
   font-size: 25px;
   text-align: center;
-}
-
-.container-about h4{
-  font-weight: bold;
-  font-size: 18px;
-  text-align: center;
-}
-
-.container-about img {
-  margin-left: 12%;
-}
-
-.subtitle-about{
-  font-size: 50px;
-  font-weight: bolder;
 }
 
 //*****************
@@ -145,12 +117,13 @@ body { font-family: sans-serif; }
 
 .carousel-portfolio {
   background: #EEE;
+  margin-bottom: 50px;
 }
 
 
-//************************
+//*********
 //LOGIN/REG
-//************************
+//*********
 
 .section {
   background-color: white;
@@ -270,7 +243,7 @@ input[type="checkbox"] {
 }
 
 .media-name{
-  padding-top: 5px;
+  padding: 5px;
   min-height: 20px;
 }
 .media-info {
@@ -308,6 +281,11 @@ input[type="checkbox"] {
 //PORTFOLIO SHOW PAGE
 //*******************
 
+.largeImg {
+  min-width: 550;
+  min-height: 375;
+}
+
 .aboutstylist {
   font-size: 18px;
   padding-bottom: 10px;
@@ -333,7 +311,7 @@ input[type="checkbox"] {
 }
 
 #map {
-  width: 500px;
+  width: 600px;
   height: 400px;
   background-color: grey;
   margin-top: 50px;
@@ -354,6 +332,20 @@ input[type="checkbox"] {
 .media-content{
   border: fine grey;
   width: 300px;
+}
+
+.container-comments {
+  margin-bottom: 100px;
+  border: 10px;
+}
+
+
+.sectionComments {
+  padding-bottom: 200px;
+}
+
+.container-portfolioshow .column {
+  margin: 20px;
 }
 
 //*****************

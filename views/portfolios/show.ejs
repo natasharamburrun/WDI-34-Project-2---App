@@ -1,8 +1,8 @@
 <div class= "container-portfolioshow">
   <div class="columns is-multiline">
-    <div class="column is-half">
+    <div class="column">
+      <p class="image is-2by4">
       <img src='<%= portfolio.url %>' alt='<%= portfolio.title %>'>
-      <section class="section">
         <div class="container-description">
           <h4 class="aboutstylist">A bit about <%= portfolio.name %>:</h3>
             <ul>
@@ -11,8 +11,6 @@
               <li><strong>About the stylist: </strong> <%= portfolio.about %> </li>
             </ul>
           </div>
-        </section>
-        <section class="section">
           <div class="container-userProfile">
             <ul>
               <% if(locals.isLoggedIn){%>
@@ -27,25 +25,20 @@
               <% } %>
             </ul>
           </div>
-        </section>
       </div>
-    <div class="column is-half">
-      <section class="section">
-        <div class="column">
-          <h4 class="aboutsalon"><%= portfolio.salon %> Salon:</h4>
+    <div class="column">
+      <h4 class="aboutsalon"><%= portfolio.salon %> Salon:</h4>
           <ul>
             <li><strong>tel: </strong> <%= portfolio.tel %> </li>
             <li><strong>email:</strong> <%= portfolio.email %> </li>
             <li><strong>Address:</strong> <%= portfolio.address %> </li>
           </ul>
-          <h4 class="visit-map"><strong>Visit Salon:</strong></h3>
-          <div id="map"></div>
-        </div>
-      </section>
+      <h4 class="visit-map"><strong>Visit Salon:</strong></h3>
+      <div id="map"></div>
     </div>
   </div>
+</div>
   <hr>
-  <section class="section">
     <div class="container-smallImg">
       <h1 class="title">Portfolio</h1>
       <div class="container-userProfile">
@@ -71,9 +64,8 @@
         <% }) %>
       </div>
     </div>
-  </section>
-  <section class="section">
-    <div class="container">
+    <hr>
+    <div class="container-comments">
       <p>Post your comment on <%= portfolio.name %></p>
         <form class="sectionComments" action="/portfolios/<%= portfolio.id %>/comment" method="post">
           <textarea name="content" rows="8" cols="80"></textarea>
@@ -92,5 +84,4 @@
             </div>
           </article>
       </div>
-    </section>
   </div>
