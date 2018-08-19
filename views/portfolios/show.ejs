@@ -10,8 +10,8 @@
               <li><strong>Stylist price from: </strong> <%= portfolio.price %> </li>
               <li><strong>About the stylist: </strong> <%= portfolio.about %> </li>
             </ul>
-          </div>
-          <div class="container-userProfile">
+        </div>
+        <div class="container-userProfile">
             <ul>
               <% if(locals.isLoggedIn){%>
                 <% if ((locals.currentUser.email === portfolio.email)){%>
@@ -24,17 +24,21 @@
                 <% } %>
               <% } %>
             </ul>
-          </div>
-      </div>
+        </div>
+    </div>
     <div class="column">
       <h4 class="aboutsalon"><%= portfolio.salon %> Salon:</h4>
-          <ul>
-            <li><strong>tel: </strong> <%= portfolio.tel %> </li>
-            <li><strong>email:</strong> <%= portfolio.email %> </li>
-            <li><strong>Address:</strong> <%= portfolio.address %> </li>
-          </ul>
-      <h4 class="visit-map"><strong>Visit Salon:</strong></h3>
-      <div id="map"></div>
+        <ul>
+          <li><strong>tel: </strong> <%= portfolio.tel %> </li>
+          <li><strong>email:</strong> <%= portfolio.email %> </li>
+          <li><strong>Address:</strong> <%= portfolio.address %> </li>
+        </ul>
+        <h4 class="visit-map"><strong>Visit Salon:</strong></h3>
+          <div id="map" data-lat="<%= portfolio.lat %>" data-long="<%= portfolio.long %>"></div>
+          <%= portfolio.lat %> <%= portfolio.lng %> %>
+          <%# set attributes as 'data-whatever' to access in javascript by document.getElement().dataset.whatever
+  here we've used JSON.stringify to turn the object into a string (which we will then JSON.parse in JavaScript) %>
+
     </div>
   </div>
 </div>
@@ -66,7 +70,7 @@
     </div>
     <hr>
     <div class="container-comments">
-      <p>Post your comment on <%= portfolio.name %></p>
+      <p>Post a comment about <%= portfolio.name %></p>
         <form class="sectionComments" action="/portfolios/<%= portfolio.id %>/comment" method="post">
           <textarea name="content" rows="8" cols="80"></textarea>
           <button name="button">Post comment</button>

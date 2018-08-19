@@ -28,46 +28,47 @@ document.addEventListener('DOMContentLoaded', () => {
   //GOOGLE MAPS SETUP
   //*****************
 
-  function initMap() {
-
-
-    const location = {lat: 51.5002, lng: 0.1332};
-    const map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 15,
-      center: location
-    });
-
-    new google.maps.Marker({
-      position: {lat: 51.5002, lng: 0.1332},
-      map: map
-    });
-  }
-
-  if($('#map')[0]) initMap();
-//
+//   /* global google */
 //   function initMap() {
-//
-//     const geocoder = new google.maps.Geocoder();
-//     const address = $('#salonAddress').text();
-//     // gets the latitute and longitude of the restuarant based in its address
-//     geocoder.geocode( { 'address': address}, function(results, status) {
-//       if (status === google.maps.GeocoderStatus.OK) {
-//         const latitude = results[0].geometry.location.lat(); //number
-//         const longitude = results[0].geometry.location.lng(); //number
-//
-//         const location = {lat: latitude, lng: longitude};
-//         const map = new google.maps.Map($('#map')[0], {
-//           zoom: 15,
-//           center: location
-//         });
-//         new google.maps.Marker({
-//           position: location,
-//           map: map
-//         });
-//       }
+//     // const venue = { lat: 51.5002, lng:  0.1332 };
+//     const location = { 'lat': parseFloat($('#map')[0].dataset.lat, 10), 'long': parseFloat($('#map')[0].dataset.long, 10) };
+//     console.log(location);
+//     //google maps display
+//     const map = new google.maps.Map(document.getElementById('map'), {
+//       zoom: 14,
+//       center: location
+//     });
+//     new google.maps.Marker({
+//       position: location,
+//       map: map
 //     });
 //   }
 //
-//   if($('#map')[0]) initMap();
-//
+//   document.addEventListener('DOMContentLoaded', () => {
+//     $('form').validate();
+//     initMap();
+//   });
+//   //
+});
+
+// map
+/* global google  */
+
+function initMap() {
+  const venue = { 'lat': parseFloat($('#map')[0].dataset.lat, 10), 'lng': parseFloat($('#map')[0].dataset.long, 10) };
+  console.log(venue);
+
+  const map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 14,
+    center: venue
+  });
+  new google.maps.Marker({
+    position: venue,
+    map: map
+  });
+}
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (document.getElementById('map')) initMap();
 });

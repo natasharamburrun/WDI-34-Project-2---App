@@ -1,6 +1,8 @@
 const Portfolio = require('../models/portfolio.js');
 const Picture = require('../models/picture.js');
 
+const Promise = require('bluebird');
+
 function indexRoute(req, res){
   Portfolio
     .find()

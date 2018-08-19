@@ -7,12 +7,18 @@ const session = require('express-session');
 const mongoose = require('mongoose');
 const app = express();
 
+// use promise library bluebird
+mongoose.Promise = require('bluebird');
+
+
 const router = require('./config/router');
 const user = require('./models/user');
 const { port, dbURI } = require('./config/environment');
 
 mongoose.connect(dbURI);
 //
+// connecting to the database
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/hair-database');
 // const databaseURI ='mongodb://localhost/hair-app';
 //
 // app.get('/', (req, res)=> res.send('<h1>Hello World!</h1>'));

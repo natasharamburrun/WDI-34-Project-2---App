@@ -11,14 +11,14 @@ const portfolioSchema = new mongoose.Schema({
   salon: String,
   email: String,
   address: String,
-  tel: Number,
+  tel: String,
   about: String,
   price: String,
   url: String,
   creator: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
-  location: {
-    lat: Number,
-    lng: Number
+  map: {
+    lat: { type: Number },
+    lng: { type: Number }
   },
   // pictures: [pictureSchema]
   comments: [commentSchema]

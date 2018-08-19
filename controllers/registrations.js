@@ -1,5 +1,6 @@
 const user = require('../models/user');
 
+
 function newRoute(req, res) {
   res.render('registrations/new');
 }

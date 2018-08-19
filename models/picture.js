@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const pictureSchema = new mongoose.Schema({
-  title: String,
+  description: String,
   url: String,
   length: { type: String, enum: ['long', 'medium', 'long'] },
   sex: { type: String, enum: ['male', 'female']},

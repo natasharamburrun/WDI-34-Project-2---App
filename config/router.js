@@ -1,15 +1,18 @@
 const router = require('express').Router();
 
+
 // const user = require('../controllers/user');
 const registrations = require('../controllers/registrations');
 const sessions = require('../controllers/sessions');
 const portfolios = require('../controllers/portfolios');
 const pictures = require('../controllers/pictures');
 
+
 router.get('/', (req, res) => res.render('home', { isHomepage: true }));
 router.get('/about', (req, res) => res.render('pages/about'));
 
 router.get('/about', (req, res) => res.render('pages/about'));
+
 
 router.route('/login')
   .get(sessions.new)
