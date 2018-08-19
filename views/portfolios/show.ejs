@@ -40,7 +40,7 @@
             <li><strong>Address:</strong> <%= portfolio.address %> </li>
           </ul>
           <h4 class="visit-map"><strong>Visit Salon:</strong></h3>
-          <div id="map" class="container"></div>
+          <div id="map"></div>
         </div>
       </section>
     </div>
@@ -60,7 +60,7 @@
           <% } %>
         </ul>
       </div>
-      <div class="carousel-portfolio" data-flickity='{ "autoPlay": true, "wrapAround": true }'>
+      <div class="carousel-portfolio" data-flickity='{ "cellAlign": "left", "autoPlay": true, "wrapAround": true }'>
         <% pictures.forEach( picture =>{ %>
            <div class="carousel-cell">
           <% if ((portfolio.creator.toString() === picture.creator.toString())){%>

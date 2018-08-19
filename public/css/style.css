@@ -89,6 +89,19 @@ body {
 .carousel-portfolio {
   background: #EEE; }
 
+/* viewport inherit size from carousel */
+.carousel .flickity-viewport {
+  position: absolute;
+  width: 100%; }
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(carousel-cell);
+  font-size: 8px;
+  color: white; }
+
 .section {
   background-color: white; }
 
@@ -233,9 +246,11 @@ input[type="checkbox"] {
   object-fit: cover; }
 
 #map {
-  width: 600px;
+  width: 500px;
   height: 400px;
-  background-color: grey; }
+  background-color: grey;
+  margin-left: 50px;
+  margin-top: 50px; }
 
 .container-hairSection {
   display: inline-flex; }
