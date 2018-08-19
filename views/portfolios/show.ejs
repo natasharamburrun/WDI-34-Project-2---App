@@ -17,13 +17,12 @@
             <ul>
               <% if(locals.isLoggedIn){%>
                 <% if ((locals.currentUser.email === portfolio.email)){%>
-                  <form>
                   <p>User Admin Controls:</p>
-                  <a href="/portfolios/<%= portfolio.id %>/edit">Edit your portfolio information</a>
                   <form action="/portfolios/<%= portfolio.id %>" method="post">
                   <input type="hidden" name="_method" value="DELETE">
                   <button name="button">Delete Profile</button>
                   </form>
+                  <a href="/portfolios/<%= portfolio.id %>/edit">Edit your portfolio information</a>
                 <% } %>
               <% } %>
             </ul>
@@ -67,20 +66,6 @@
               <a href='/pictures/<%= picture.id %>'>
                 <img src='<%= picture.url %>' alt='<%= picture.title %>' />
               </a>
-              <div class="background-black-grunge">
-              <ul>
-                <% if(locals.isLoggedIn){%>
-                  <% if ((locals.currentUser.email === portfolio.email)){%>
-                    <form>
-                    <a href="/pictures/<%= picture.id %>/edit">Edit</a>
-                    <form action="/pictures/<%= picture.id %>" method="post">
-                    <input type="hidden" name="_method" value="DELETE">
-                    <a class="delete">Delete Profile</a>
-                    </form>
-                  <% } %>
-                <% } %>
-              </ul>
-              </div>
           <% } %>
           </div>
         <% }) %>
