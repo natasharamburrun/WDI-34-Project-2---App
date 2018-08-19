@@ -19,7 +19,6 @@
                 <% if ((locals.currentUser.email === portfolio.email)){%>
                   <form>
                   <p>User Admin Controls:</p>
-                  <a href="/pictures/new">Add a picture to your portfolio</a><br>
                   <a href="/portfolios/<%= portfolio.id %>/edit">Edit your portfolio information</a>
                   <form action="/portfolios/<%= portfolio.id %>" method="post">
                   <input type="hidden" name="_method" value="DELETE">
@@ -50,6 +49,17 @@
   <section class="section">
     <div class="container-smallImg">
       <h1 class="title">Portfolio</h1>
+      <div class="container-userProfile">
+        <ul>
+          <% if(locals.isLoggedIn){%>
+            <% if ((locals.currentUser.email === portfolio.email)){%>
+              <form>
+              <a href="/pictures/new">Add a picture</a><br>
+              </form>
+            <% } %>
+          <% } %>
+        </ul>
+      </div>
       <div class="carousel-portfolio" data-flickity='{ "autoPlay": true, "wrapAround": true }'>
         <% pictures.forEach( picture =>{ %>
            <div class="carousel-cell">

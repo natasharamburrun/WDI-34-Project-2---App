@@ -112,6 +112,15 @@ body { font-family: sans-serif; }
   }
 }
 
+.carousel-portfolio img {
+  display: block;
+  min-height: 250px;
+  min-width: 250px;
+}
+
+.carousel-portfolio {
+  background: #EEE
+}
 
 //************************
 //login/registration pages
@@ -179,6 +188,24 @@ input[type="checkbox"] {
 
 .notification .field-submit button {
   width: 300px;
+}
+
+//**********************************************
+//styling for new portfolio page
+//**********************************************
+
+.container-newPortfolio {
+  background-color: #8d6c65;
+  width: 500px;
+  display: flex;
+  display:table;
+  height:100%;
+  margin:
+  0 auto;
+}
+
+.control-cancel {
+  align-items: center;
 }
 
 //**********************************************
@@ -298,11 +325,24 @@ input[type="checkbox"] {
   background-color: grey;
 }
 
-
+//*****************************************************
 //styling of the hair link which you can delete or edit
+//*****************************************************
+
+.container-hairSection {
+  display: inline-flex;
+
+}
+
 .container-hairSection img {
   height: 500px;
   width: 500px;
+  object-fit: cover;
+}
+
+.card-media {
+  min-width: 500px;
+  padding-left: 100px;
 }
 
 .media-name p {

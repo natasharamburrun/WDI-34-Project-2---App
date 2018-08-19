@@ -40,6 +40,7 @@ function editRoute(req, res){
       res.render('pictures/edit', {picture});
     });
 }
+
 function updateRoute(req, res){
   Picture
     .findById(req.params.id)

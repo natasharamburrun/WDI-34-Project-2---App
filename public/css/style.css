@@ -81,6 +81,14 @@ body {
 @media screen and (min-width: 768px) {
   .carousel img {
     height: 400px; } }
+.carousel-portfolio img {
+  display: block;
+  min-height: 250px;
+  min-width: 250px; }
+
+.carousel-portfolio {
+  background: #EEE; }
+
 .section {
   background-color: white; }
 
@@ -131,6 +139,17 @@ input[type="checkbox"] {
 
 .notification .field-submit button {
   width: 300px; }
+
+.container-newPortfolio {
+  background-color: #8d6c65;
+  width: 500px;
+  display: flex;
+  display: table;
+  height: 100%;
+  margin: 0 auto; }
+
+.control-cancel {
+  align-items: center; }
 
 .card-imageInx img {
   border: none;
@@ -218,9 +237,17 @@ input[type="checkbox"] {
   height: 400px;
   background-color: grey; }
 
+.container-hairSection {
+  display: inline-flex; }
+
 .container-hairSection img {
   height: 500px;
-  width: 500px; }
+  width: 500px;
+  object-fit: cover; }
+
+.card-media {
+  min-width: 500px;
+  padding-left: 100px; }
 
 .media-name p {
   margin: 5px; }
