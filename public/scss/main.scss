@@ -1,6 +1,35 @@
 *{
   font-family: 'Antic Didone', serif;
 }
+
+
+//***********
+//NAVBAR
+//***********
+
+.navbar-item{
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  img {
+    min-height: 50px;
+    min-width: 50px;
+  }
+}
+
+.nav-container {
+  border-bottom: 1px solid #cccccc;
+}
+
+#navMenu {
+  background-color: white;
+  border-bottom: 1px solid #cccccc;
+}
+
+//***********
+//ABOUT PAGE
+//***********
+
 .container-about{
   text-align: center;
   font-weight: bold;
@@ -24,32 +53,6 @@
   padding-top: 10px;
 }
 
-//***********
-//navbar-item
-//***********
-
-.navbar-item{
-  color: black;
-  font-size: 20px;
-  font-weight: 600;
-  img {
-    min-height: 50px;
-    min-width: 50px;
-  }
-}
-
-.nav-container {
-  border-bottom: 1px solid #cccccc;
-}
-
-#navMenu {
-  background-color: white;
-  border-bottom: 1px solid #cccccc;
-}
-//******************
-//styling about page
-//******************
-
 .container-about h3{
   font-weight: bold;
   font-size: 25px;
@@ -72,7 +75,7 @@
 }
 
 //*****************
-//styling home page
+//HOME PAGE
 //*****************
 
 .hero-body {
@@ -146,7 +149,7 @@ body { font-family: sans-serif; }
 
 
 //************************
-//login/registration pages
+//LOGIN/REG
 //************************
 
 .section {
@@ -174,6 +177,7 @@ body { font-family: sans-serif; }
   height:100%;
   margin:
   0 auto;
+  padding-bottom: 500px;
 }
 
 .notification form {
@@ -184,6 +188,7 @@ body { font-family: sans-serif; }
   justify-content: center;
   flex-direction: row;
   padding: 40px 150px;
+  padding-bottom: 100px;
 }
 
 .notification h2{
@@ -191,6 +196,7 @@ body { font-family: sans-serif; }
   font-style: italic;
   font-weight: bold;
   font-size: 25px;
+  padding-top: 50px;
 }
 
 .notification button{
@@ -213,9 +219,9 @@ input[type="checkbox"] {
   width: 300px;
 }
 
-//**********************************************
-//styling for new portfolio page
-//**********************************************
+//******************
+//NEW PORTFOLIO PAGE
+//******************
 
 .container-newPortfolio {
   background-color: #8d6c65;
@@ -227,13 +233,9 @@ input[type="checkbox"] {
   0 auto;
 }
 
-.control-cancel {
-  align-items: center;
-}
-
-//**********************************************
-//styling for picture page (index of hairstyles)
-//**********************************************
+//******************
+//INDEX PICTURE PAGE
+//******************
 
 .card-imageInx img{
   border: none;
@@ -242,9 +244,9 @@ input[type="checkbox"] {
   object-fit: cover;
 }
 
-//********************************
-//STYLING THE INDEX PORTFOLIO PAGE
-//********************************
+//********************
+//INDEX PORTFOLIO PAGE
+//********************
 
 .card-image img{
   height: 250px;
@@ -302,21 +304,9 @@ input[type="checkbox"] {
   opacity: 0.5;
 }
 
-
-//*************************************
-//styling hairpics for each hairdresser
-//*************************************
-
-.container-smallImg img{
-  width: 200px;
-  height: 200px;
-  margin: 10px 10px;
-  padding-left: 2px;
-  padding-right: 2px;
-}
-//**************************
-//portfolio hairdresser page
-//**************************
+//*******************
+//PORTFOLIO SHOW PAGE
+//*******************
 
 .aboutstylist {
   font-size: 18px;
@@ -349,9 +339,26 @@ input[type="checkbox"] {
   margin-top: 50px;
 }
 
-//*****************************************************
-//styling of the hair link which you can delete or edit
-//*****************************************************
+.container-smallImg img{
+  width: 200px;
+  height: 200px;
+  margin: 10px 10px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.sectionComments{
+  display: inline-block;
+}
+
+.media-content{
+  border: fine grey;
+  width: 300px;
+}
+
+//*****************
+//PICTURE SHOW PAGE
+//*****************
 
 .container-hairSection {
   display: inline-flex;
@@ -366,27 +373,9 @@ input[type="checkbox"] {
 
 .card-media {
   min-width: 500px;
-  padding-left: 100px;
-}
-
-.media-name p {
-  margin: 5px;
-}
-
-.media-contact {
-  margin: 5px;
-}
-//comment section
-
-.sectionComments{
-  display: inline-block;
-}
-
-.media-content{
-  border: fine grey;
-  width: 300px;
-}
-
-.contact{
-  width: 300px;
+  margin: 50px;
+  li {
+    padding: 10px;
+    font-size: 20px;
+  }
 }

@@ -1,6 +1,21 @@
 * {
   font-family: 'Antic Didone', serif; }
 
+.navbar-item {
+  color: black;
+  font-size: 20px;
+  font-weight: 600; }
+  .navbar-item img {
+    min-height: 50px;
+    min-width: 50px; }
+
+.nav-container {
+  border-bottom: 1px solid #cccccc; }
+
+#navMenu {
+  background-color: white;
+  border-bottom: 1px solid #cccccc; }
+
 .container-about {
   text-align: center;
   font-weight: bold; }
@@ -17,21 +32,6 @@
 .container-about h3 {
   font-size: 25px;
   padding-top: 10px; }
-
-.navbar-item {
-  color: black;
-  font-size: 20px;
-  font-weight: 600; }
-  .navbar-item img {
-    min-height: 50px;
-    min-width: 50px; }
-
-.nav-container {
-  border-bottom: 1px solid #cccccc; }
-
-#navMenu {
-  background-color: white;
-  border-bottom: 1px solid #cccccc; }
 
 .container-about h3 {
   font-weight: bold;
@@ -125,7 +125,8 @@ body {
   display: flex;
   display: table;
   height: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-bottom: 500px; }
 
 .notification form {
   display: table-cell;
@@ -134,13 +135,15 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  padding: 40px 150px; }
+  padding: 40px 150px;
+  padding-bottom: 100px; }
 
 .notification h2 {
   text-align: center;
   font-style: italic;
   font-weight: bold;
-  font-size: 25px; }
+  font-size: 25px;
+  padding-top: 50px; }
 
 .notification button {
   width: 300px; }
@@ -164,9 +167,6 @@ input[type="checkbox"] {
   display: table;
   height: 100%;
   margin: 0 auto; }
-
-.control-cancel {
-  align-items: center; }
 
 .card-imageInx img {
   border: none;
@@ -222,13 +222,6 @@ input[type="checkbox"] {
   visibility: visible;
   opacity: 0.5; }
 
-.container-smallImg img {
-  width: 200px;
-  height: 200px;
-  margin: 10px 10px;
-  padding-left: 2px;
-  padding-right: 2px; }
-
 .aboutstylist {
   font-size: 18px;
   padding-bottom: 10px; }
@@ -255,6 +248,20 @@ input[type="checkbox"] {
   background-color: grey;
   margin-top: 50px; }
 
+.container-smallImg img {
+  width: 200px;
+  height: 200px;
+  margin: 10px 10px;
+  padding-left: 2px;
+  padding-right: 2px; }
+
+.sectionComments {
+  display: inline-block; }
+
+.media-content {
+  border: fine grey;
+  width: 300px; }
+
 .container-hairSection {
   display: inline-flex; }
 
@@ -265,22 +272,9 @@ input[type="checkbox"] {
 
 .card-media {
   min-width: 500px;
-  padding-left: 100px; }
-
-.media-name p {
-  margin: 5px; }
-
-.media-contact {
-  margin: 5px; }
-
-.sectionComments {
-  display: inline-block; }
-
-.media-content {
-  border: fine grey;
-  width: 300px; }
-
-.contact {
-  width: 300px; }
+  margin: 50px; }
+  .card-media li {
+    padding: 10px;
+    font-size: 20px; }
 
 /*# sourceMappingURL=style.css.map */

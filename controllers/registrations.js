@@ -10,7 +10,7 @@ function createRoute(req, res){
     .create(req.body)
     .then((user)=>{
       console.log(user);
-      res.redirect('/');
+      res.redirect('/login');
     })
     .catch((err) => {
       console.log(err);

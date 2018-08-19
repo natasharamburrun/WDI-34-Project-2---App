@@ -59,7 +59,7 @@
           <% } %>
         </ul>
       </div>
-      <div class="carousel-portfolio" data-flickity='{ "cellAlign": "left", "autoPlay": true, "wrapAround": true }'>
+      <div class="carousel-portfolio" data-flickity='{ "cellAlign": "left", "autoPlay": false, "wrapAround": true }'>
         <% pictures.forEach( picture =>{ %>
            <div class="carousel-cell">
           <% if ((portfolio.creator.toString() === picture.creator.toString())){%>
@@ -74,7 +74,7 @@
   </section>
   <section class="section">
     <div class="container">
-      <p>Post your comments on <%= portfolio.name %></p>
+      <p>Post your comment on <%= portfolio.name %></p>
         <form class="sectionComments" action="/portfolios/<%= portfolio.id %>/comment" method="post">
           <textarea name="content" rows="8" cols="80"></textarea>
           <button name="button">Post comment</button>
