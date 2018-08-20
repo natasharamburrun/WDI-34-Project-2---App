@@ -1,11 +1,11 @@
 <section class="section-admin">
-  <a href="/pictures/<%= picture.id %>/edit">Edit Page</a>
-  <form action="/pictures/<%= picture.id %>" method="post">
-    <input type="hidden" name="_method" value="DELETE">
-    <button name="button">Delete Profile</button>
-  </form>
   <% if(locals.isLoggedIn){ %>
     <% if ((locals.currentUser.username === picture.username)){%>
+      <a href="/pictures/<%= picture.id %>/edit">Edit Page</a>
+      <form action="/pictures/<%= picture.id %>" method="post">
+      <input type="hidden" name="_method" value="DELETE">
+      <button name="button">Delete Profile</button>
+      </form>
     <% } %>
   <% } %>
 </section>
