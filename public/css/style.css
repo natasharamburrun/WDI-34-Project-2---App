@@ -220,7 +220,7 @@ input[type="checkbox"] {
   margin-top: 20px; }
 
 .container-smallImg {
-  margin: 100px; }
+  margin: 50px; }
 
 .container-smallImg img {
   object-fit: cover; }
@@ -254,6 +254,10 @@ input[type="checkbox"] {
 
 .container-portfolioshow .column {
   margin: 20px; }
+
+.container-portfolioshow .image img {
+  max-width: 600px;
+  max-height: 400px; }
 
 .container-hairSection {
   display: inline-flex; }

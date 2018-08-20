@@ -59,7 +59,7 @@ function initMap() {
   console.log(venue);
 
   const map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 14,
+    zoom: 16,
     center: venue
   });
   new google.maps.Marker({
