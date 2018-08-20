@@ -40,13 +40,12 @@ function editRoute(req, res){
       res.render('pictures/edit', {picture});
     });
 }
-
 function updateRoute(req, res){
   Picture
     .findById(req.params.id)
     .update(req.body)
-    .then( picture =>{
-      return res.redirect(`/pictures/${picture.id}`);
+    .then(() =>{
+      return res.redirect(`/pictures/${req.params.id}`);
     });
 }
 function deleteRoute(req, res){

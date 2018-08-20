@@ -23,35 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-
-  //*****************
-  //GOOGLE MAPS SETUP
-  //*****************
-
-//   /* global google */
-//   function initMap() {
-//     // const venue = { lat: 51.5002, lng:  0.1332 };
-//     const location = { 'lat': parseFloat($('#map')[0].dataset.lat, 10), 'long': parseFloat($('#map')[0].dataset.long, 10) };
-//     console.log(location);
-//     //google maps display
-//     const map = new google.maps.Map(document.getElementById('map'), {
-//       zoom: 14,
-//       center: location
-//     });
-//     new google.maps.Marker({
-//       position: location,
-//       map: map
-//     });
-//   }
-//
-//   document.addEventListener('DOMContentLoaded', () => {
-//     $('form').validate();
-//     initMap();
-//   });
-//   //
 });
 
-// map
+//*****************
+//GOOGLE MAPS SETUP
+//*****************
 /* global google  */
 
 function initMap() {

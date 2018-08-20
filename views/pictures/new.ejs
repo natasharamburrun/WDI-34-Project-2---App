@@ -1,41 +1,47 @@
 <form action="/pictures" method="post">
   <div class="field">
-    <label class="label">Stylist Name</label>
+    <label class="label">Stylist</label>
     <div class="control">
-      <input class="input" type="text" name="name" id="name">
+      <input class="input" type="text" name="stylist" id="stylist">
     </div>
   </div>
   <div class="field">
-    <label class="label">Salon Name</label>
+    <label class="label">Salon</label>
     <div class="control">
       <input class="input" type="text" name="salon" id="salon" >
     </div>
   </div>
-    <div class="field">
-      <label class="label">Image</label>
-      <div class="control">
-        <input class="input" type="text" name="url" id="url">
-      </div>
+  <div class="field">
+    <label class="label">Image</label>
+    <div class="control">
+      <input class="input" type="text" name="url" id="url">
     </div>
-    <div class="field">
-      <label class="label">Styles</label>
-      <div class="styles">
-        <input class="input" type="text" name="styles" id="styles">
-      </div>
+  </div>
+  <div class="field">
+    <label class="label">Hair Length</label>
+    <div class="styles">
+      <input class="input" type="text" name="length" id="length">
     </div>
-    <div class="field">
-      <label class="label">Products</label>
-      <div class="styles">
-        <input class="input" type="text" name="products" id="products">
-      </div>
+  </div>
+  <div class="field">
+    <label class="label">Male/female</label>
+    <div class="styles">
+      <input class="input" type="text" name="sex" id="sex">
     </div>
-    <div class="field">
-      <div class="control">
-        <label for="products">Products</label>
-        <textarea class="textarea" type="text" placeholder="products" name="products" id="products"></textarea>
-      </div>
+  </div>
+  <div class="field">
+    <label class="label">Service</label>
+    <div class="styles">
+      <input class="input" type="text" name="service" id="service">
     </div>
-    <div>
-      <button name="button">Submit</button>
+  </div>
+  <div class="field">
+    <div class="control">
+      <label for="products">Products</label>
+      <textarea class="textarea" type="text" placeholder="products" name="products" id="products"></textarea>
     </div>
+  </div>
+  <div>
+    <button name="button">Submit</button>
+  </div>
 </form>

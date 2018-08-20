@@ -1,14 +1,55 @@
-<form action="/pictures/<%= picture.id %>" method="POST">
-    <input type="hidden" name="_method" value="PUT">
-    <div>
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title" value="<%= picture.title %>">
+<form action="/pictures/<%= picture.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+
+    <div class="field">
+      <label class="label">Stylist</label>
+      <div class="control">
+        <input class="input" type="text" name="stylist" value= "<%=picture.stylist %>">
+      </div>
     </div>
-    <div>
-        <label for="url">Url</label>
-        <input type="url" name="url" id="url"  value="<%= picture.url %>">
+    <div class="field">
+      <label class="label">Salon</label>
+      <div class="control">
+        <input class="input" type="text" name="salon" value= "<%=picture.salon %>">
+      </div>
     </div>
-    <div>
-      <button name="button">Submit</button>
+    <div class="field">
+      <label class="label">Image</label>
+      <div class="control">
+        <input class="input" type="text" name="url" value= "<%=picture.url %>">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Hair Length</label>
+      <div class="control">
+        <input class="input" type="text" name="length" value= "<%=picture.length %>">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Male/female</label>
+      <div class="control">
+        <input class="input" type="text" name="sex" value= "<%=picture.sex %>">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Services</label>
+      <div class="control">
+        <input class="input" type="text" name="services" value= "<%=picture.services %>">
+      </div>
+    </div>
+    <div class="field">
+      <div class="control">
+        <label for="products">Products</label>
+        <textarea class="textarea" type="text" placeholder="products" name="products" value= "<%=picture.products %>"></textarea>
+      </div>
+    </div>
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-link">Submit</button>
+      </div>
+      <div class="control">
+        <button class="button is-text">Cancel</button>
+      </div>
+      
     </div>
 </form>
