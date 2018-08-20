@@ -19,8 +19,8 @@
                   <form action="/portfolios/<%= portfolio.id %>" method="post">
                   <input type="hidden" name="_method" value="DELETE">
                   <button name="button">Delete Profile</button>
-                  </form>
                   <a href="/portfolios/<%= portfolio.id %>/edit">Edit your portfolio information</a>
+                  </form>
                 <% } %>
               <% } %>
             </ul>
@@ -34,8 +34,8 @@
           <li><strong>Address:</strong> <%= portfolio.address %> </li>
         </ul>
         <h4 class="visit-map"><strong>Visit Salon:</strong></h3>
-          <div id="map" data-lat="<%= portfolio.lat %>" data-long="<%= portfolio.long %>"></div>
-          <%= portfolio.lat %> <%= portfolio.lng %> %>
+          <div id="map" data-lat="<%= portfolio.lat %>" data-long="<%= portfolio.lng %>"></div>
+          <%= portfolio.lat %> <%= portfolio.lng %>
           <%# set attributes as 'data-whatever' to access in javascript by document.getElement().dataset.whatever
   here we've used JSON.stringify to turn the object into a string (which we will then JSON.parse in JavaScript) %>
 

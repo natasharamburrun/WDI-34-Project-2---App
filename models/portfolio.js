@@ -16,10 +16,8 @@ const portfolioSchema = new mongoose.Schema({
   price: String,
   url: String,
   creator: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
-  map: {
-    lat: { type: Number },
-    lng: { type: Number }
-  },
+  lat: Number,
+  lng: Number,
   // pictures: [pictureSchema]
   comments: [commentSchema]
 });
