@@ -2,7 +2,6 @@ const Portfolio = require('../models/portfolio.js');
 const Picture = require('../models/picture.js');
 
 
-
 function indexRoute(req, res){
   Portfolio
     .find()

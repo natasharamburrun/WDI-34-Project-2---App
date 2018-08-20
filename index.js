@@ -15,13 +15,10 @@ const router = require('./config/router');
 const user = require('./models/user');
 const { port, dbURI } = require('./config/environment');
 
-mongoose.connect(dbURI);
-//
+
 // connecting to the database
-// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/hair-database');
-// const databaseURI ='mongodb://localhost/hair-app';
-//
-// app.get('/', (req, res)=> res.send('<h1>Hello World!</h1>'));
+mongoose.connect(dbURI);
+
 
 
 app.set('view engine', 'ejs');
@@ -65,11 +62,6 @@ app.use(methodOverride((req)=>{
     return method;
   }
 }));
-
-//handle a request
-// app.get('/',(req, res) => res.render('home', {
-//   isHomepage: true
-// }));
 
 app.use(router);
 

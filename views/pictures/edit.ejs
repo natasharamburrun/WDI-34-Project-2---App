@@ -2,9 +2,9 @@
     <input type="hidden" name="_method" value="put">
 
     <div class="field">
-      <label class="label">Stylist</label>
+      <label class="label">Please enter your username: </label>
       <div class="control">
-        <input class="input" type="text" name="stylist" value= "<%=picture.stylist %>">
+        <input class="input" type="text" name="username" value= "<%=picture.username %>">
       </div>
     </div>
     <div class="field">
@@ -20,27 +20,27 @@
       </div>
     </div>
     <div class="field">
-      <label class="label">Hair Length</label>
-      <div class="control">
-        <input class="input" type="text" name="length" value= "<%=picture.length %>">
-      </div>
-    </div>
-    <div class="field">
       <label class="label">Male/female</label>
       <div class="control">
         <input class="input" type="text" name="sex" value= "<%=picture.sex %>">
       </div>
     </div>
     <div class="field">
-      <label class="label">Services</label>
+      <label class="label">Hair Length</label>
       <div class="control">
-        <input class="input" type="text" name="services" value= "<%=picture.services %>">
+        <input class="input" type="text" name="length" value= "<%=picture.length %>">
       </div>
     </div>
     <div class="field">
+      <label class="label">Service</label>
       <div class="control">
-        <label for="products">Products</label>
-        <textarea class="textarea" type="text" placeholder="products" name="products" value= "<%=picture.products %>"></textarea>
+        <input class="input" type="text" name="service" value= "<%=picture.service %>">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Products</label>
+      <div class="control">
+        <input class="input" type="text" name="products" value= "<%=picture.products %>">
       </div>
     </div>
     <div class="field is-grouped">
@@ -50,6 +50,5 @@
       <div class="control">
         <button class="button is-text">Cancel</button>
       </div>
-      
     </div>
 </form>

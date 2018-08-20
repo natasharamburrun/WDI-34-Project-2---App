@@ -8,6 +8,7 @@ const portfolios = require('../controllers/portfolios');
 const pictures = require('../controllers/pictures');
 
 
+
 router.get('/', (req, res) => res.render('home', { isHomepage: true }));
 router.get('/about', (req, res) => res.render('pages/about'));
 

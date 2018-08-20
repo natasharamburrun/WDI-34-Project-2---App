@@ -148,6 +148,9 @@ input[type="checkbox"] {
   height: 100%;
   margin: 0 auto; }
 
+.section-portfolioIndex {
+  padding-bottom: 800px; }
+
 .card-imageInx img {
   border: none;
   display: inline-block;
@@ -260,13 +263,21 @@ input[type="checkbox"] {
 
 .container-hairSection img {
   height: 500px;
+  margin: 50px;
   width: 500px;
   object-fit: cover; }
 
-.card-media {
-  min-width: 500px;
+.card-abouthairstyle {
+  min-width: 250px;
   margin: 50px; }
-  .card-media li {
+  .card-abouthairstyle li {
+    padding: 10px;
+    font-size: 20px; }
+
+.card-aboutstylistsalon {
+  min-width: 250px;
+  margin: 50px; }
+  .card-aboutstylistsalon li {
     padding: 10px;
     font-size: 20px; }
 

@@ -206,6 +206,10 @@ input[type="checkbox"] {
   0 auto;
 }
 
+.section-portfolioIndex {
+  padding-bottom: 800px;
+}
+
 //******************
 //INDEX PICTURE PAGE
 //******************
@@ -216,6 +220,8 @@ input[type="checkbox"] {
   margin: 20px 20px;
   object-fit: cover;
 }
+
+
 
 //********************
 //INDEX PORTFOLIO PAGE
@@ -304,7 +310,7 @@ input[type="checkbox"] {
 // .container-smallImg {
 //   margin: 50px;
 // }
- 
+
 .container-smallImg img {
   object-fit: cover;
 }
@@ -357,20 +363,33 @@ input[type="checkbox"] {
 
 .container-hairSection {
   display: inline-flex;
-
 }
 
 .container-hairSection img {
   height: 500px;
+  margin: 50px;
   width: 500px;
   object-fit: cover;
 }
 
-.card-media {
-  min-width: 500px;
+.card-abouthairstyle {
+  min-width: 250px;
   margin: 50px;
   li {
     padding: 10px;
     font-size: 20px;
   }
+}
+
+.card-aboutstylistsalon {
+  min-width: 250px;
+  margin: 50px;
+  li {
+    padding: 10px;
+    font-size: 20px;
+  }
+}
+
+.section-admin {
+
 }
