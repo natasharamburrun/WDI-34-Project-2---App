@@ -13,14 +13,14 @@
         </div>
         <div class="container-userProfile">
             <ul>
+              <p>User Admin Controls:</p>
+              <form action="/portfolios/<%= portfolio.id %>" method="post">
+                <input type="hidden" name="_method" value="DELETE">
+                <button name="button">Delete Profile</button>
+                <a href="/portfolios/<%= portfolio.id %>/edit">Edit your portfolio information</a>
+              </form>
               <% if(locals.isLoggedIn){%>
                 <% if ((locals.currentUser.email === portfolio.email)){%>
-                  <p>User Admin Controls:</p>
-                  <form action="/portfolios/<%= portfolio.id %>" method="post">
-                  <input type="hidden" name="_method" value="DELETE">
-                  <button name="button">Delete Profile</button>
-                  <a href="/portfolios/<%= portfolio.id %>/edit">Edit your portfolio information</a>
-                  </form>
                 <% } %>
               <% } %>
             </ul>
