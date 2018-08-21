@@ -28,7 +28,7 @@ I decided to build a platform for London hairdressers to showcase their portfoli
 <p align="center"><img src="https://i.imgur.com/wQ3hVW0.png" width="700"/></p>
 
 ### The build
-The express app was built building out the backend functions using Mongoose Database, Node.js and setting a MVC design (model, views and controllers) Testing each of the views using Insomnia a REST client. The  project was also built using EJS templating which injected the views on the front-end.
+The express app was built by building out the backend functions using Mongoose Database, Node.js, setting a MVC design (model, views and controllers) and testing each of the views using Insomnia a REST client. The  project was also built using EJS templating which injected the views on the front-end.
 
 The project has three models user, portfolio and picture and covers the CRUD requirement. Each user registered can create, read, update and delete their profiles, comments and pictures.
 
@@ -53,7 +53,7 @@ function showRoute(req, res){
     });
 }
 ```
-The main feature of this app was to build a platform where the public can view London hairdressers and be able to use them if they like their work, therefore I felt that including google maps would be a user requirement. <br>
+The main feature of this app was to build a platform where the public can view London hairdressers and be able to book an appointment with them if they like their work, therefore I felt that including google maps would be a user requirement. <br>
 See below code used to implement this feature,
 I used parseFloat which returns the value up to a point and ignore the character, which in this case would be a decimal point, i.e. returning a string into a number.
 
