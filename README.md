@@ -53,7 +53,7 @@ function showRoute(req, res){
     });
 }
 ```
-The main feature of this app was to build a platform where the public can view London hairdressers and be able to book an appointment with them if they like their work, therefore I felt that including google maps would be a user requirement. <br>
+The main feature of this app was to build a platform where the public can view London hairdressers and be able to book an appointment with them if they like their work, I felt that google maps would be a user requirement. <br>
 See below code used to implement this feature,
 I used parseFloat which returns the value up to a point and ignore the character, which in this case would be a decimal point, i.e. returning a string into a number.
 
@@ -75,7 +75,7 @@ function initMap() {
     window.addEventListener('DOMContentLoaded', () => {
       if (document.getElementById('map')) initMap();
       });
-      ```
+```
 
 ### What do differently
 As this was my first RESTful application, my wireframes and planning were not as organised as my latest projects. Using Draw.io and Trello would have made the build of the app more streamline, and I would have been able to implement additional features in the 7 day timeframe.
