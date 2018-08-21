@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const pictureSchema = new mongoose.Schema({
   username: { type: String, required: true},
+  email: { type: String, unique: true, required: true},
   salon: { type: String, required: true},
   url: { type: String, required: true},
   length: String,

@@ -1,6 +1,6 @@
 <section class="section-admin">
   <% if(locals.isLoggedIn){ %>
-    <% if ((locals.currentUser.username === picture.username)){%>
+    <% if ((locals.currentUser.email === picture.email)){%>
       <a href="/pictures/<%= picture.id %>/edit">Edit Page</a>
       <form action="/pictures/<%= picture.id %>" method="post">
       <input type="hidden" name="_method" value="DELETE">
@@ -13,7 +13,7 @@
   <div class="container-hairSection">
     <div class="card-aboutstylistsalon">
       <ul>
-        <li><strong>Stylist: </strong> <%= picture.username %> </li>
+        <li><strong>Stylist Username: </strong> <%= picture.username %> </li>
         <li><strong>Salon: </strong> <%= picture.salon %> </li>
       </ul>
     </div>
