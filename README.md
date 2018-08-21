@@ -92,7 +92,7 @@ This app has been deployed and is functional to the public and free of errors.
 <hr>
 
 ### Pages
-Kept Page clean and straightforward for best user experience.
+Kept pages clean and straightforward for best user experience.
 
 <strong>Portfolio Index Page</strong>: This page is available to the public providing an index of all stylist registered on the app
 <p align="center"><img src="https://i.imgur.com/qXWtVpD.png" width="700"/></p>
@@ -104,7 +104,7 @@ Kept Page clean and straightforward for best user experience.
 <strong>Login Page</strong>: Standard login page
 <p align="center"><img src="https://i.imgur.com/Zr4QyfU.png" width="700"/></p>
 
-<strong>Register Page</strong>: Register page includes a checkbox 'Are you a hairdresser' used to create a new portfolio and a feature for a future user client login access.
+<strong>Register Page</strong>: Register page includes a checkbox 'Are you a hairdresser' used to create a new portfolio and a use for a future user client login access.
 <p align="center"><img src="https://i.imgur.com/lPTlq6n.png" width="700"/></p>
 
 <strong>Picture Index Page</strong>: Index page for hairstyles
@@ -116,7 +116,7 @@ Kept Page clean and straightforward for best user experience.
 <hr>
 
 #### planned features
-- My next planned change will be to the comment field. Currently, anyone can leave or delete a comment on the hairstylist page. I would like to amend this to allow only people who have logged on to leave and delete their comments.
+- My next planned feature will be to make changes to the comment field. Currently, anyone can leave or delete a comment on the hairstylist page. I would like to amend this to allow only people who have logged on to leave and delete their comments.
 - Add an input field to include the name and email of the person who leaves a comment.
 - Star rating system - on the hairdresser show page
 - Add a client user login and register allowing restricted access to the site so they can leave the comments and ratings.  
