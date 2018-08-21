@@ -44,7 +44,6 @@ function initMap() {
   });
 }
 
-
 window.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('map')) initMap();
 });

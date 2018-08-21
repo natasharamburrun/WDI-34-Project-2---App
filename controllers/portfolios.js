@@ -1,7 +1,6 @@
 const Portfolio = require('../models/portfolio.js');
 const Picture = require('../models/picture.js');
 
-
 function indexRoute(req, res){
   Portfolio
     .find()
@@ -13,31 +12,19 @@ function indexRoute(req, res){
 }
 
 function showRoute(req, res){
-  // Picture
-  //   .findById(req.params.id)
-  //   .populate('creator');
   Promise.all([Picture.find(), Portfolio.findById(req.params.id)])
     .then((values)=> {
-      // console.log('values should be here:', values[0][0]);
       res.render('portfolios/show', {
         pictures: values[0],
         portfolio: values[1]
       });
     });
-
-  // Portfolio
-  //   .findById(req.params.id)
-  //   .populate('creator')
-  //   .exec()
-  //   .then( (portfolio) =>{
-  //     res.render('portfolios/show', {portfolio});
-  //   });
 }
+
 function newRoute(req, res){
   if(!res.locals.currentUser.isHairdresser) return res.redirect('/');
   res.render('portfolios/new');
 }
-// locals.isLoggedIn && locals.user.isHairdresser
 
 function createRoute(req, res){
   const portfolioData = req.body;
@@ -53,11 +40,7 @@ function editRoute(req, res){
     .findById(req.params.id)
     .exec()
     .then((portfolio) =>{
-      // if (req.params.id === res.local.user.id){
       res.render('portfolios/edit', {portfolio});
-      // } else {
-      // return res.redirect('/');
-      // }
     });
 }
 function updateRoute(req, res){

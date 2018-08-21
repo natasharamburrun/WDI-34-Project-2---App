@@ -2,27 +2,117 @@
 
 # GA WDI-34  Project #2: A Full-stack Application
 
-As part of the WDI programme, our second deliverable was to build our first full-stack RESTful authenticated app using Node.JS, ESJ and MongoDB.
+The WDI GA second project deliverable was to build a full-stack RESTful application that includes authenticated using Node.JS, ESJ and MongoDB
 
-I chose built a Hairstylist app, designed to enable hairdressers and barbers to showcase their portfolio of work. The app includes information about them and the salon they work from, as well as the pictures of the work they have performed on their existing clients.
-
-#### The build
-
-In order to reach MVP my target was to create a route for hairdressers to login and upload pictures of their current hairstyles and information about themselves. To achieve this I created 3 models Users, Portfolio and Picture.
+Visit app which is deployed on [Heroku](https://wd34hairstylistappproject.herokuapp.com/)
 
 
+### Requirements (Brief)
+
+Your app must:
+* **Have at _least_ 2 models** – one representing a user and one that represents the main resource of your app, e.g. Restaurants
+* **Include relationships** - embedded or referenced. Make sure you take the time to consider the best approach before building out your models.
+* **The app should include authentication** - with encrypted passwords & an authorization flow.
+* **Have complete RESTful routes** for at least one of your resources with all CRUD actions.
+* **You must use SCSS** - as this is a key industry skill.
+* **Include wireframes** - that you designed before building the app.
+* Have **semantically clean HTML** - you make sure you write HTML that makes structural sense rather than thinking about how it might look, which is the job of CSS.
+* **Be deployed online** and accessible to the public.
+---
+### Idea
+
+I decided to build a platform for London hairdressers to showcase their portfolio of work and allow any user to access the app to obtain information about the salon and the hairstylist. This project allowed me to explore my creativity and focus on establishing the fundamentals in building an app.
+
+
+<strong>Home Page</strong>: For my homepage I used API Flickity to implement a carousel showing a variety of London salons.
+<p align="center"><img src="https://i.imgur.com/wQ3hVW0.png" width="700"/></p>
+
+### The build
+The express app was built building out the backend functions using Mongoose Database, Node.js and setting a MVC design (model, views and controllers) Testing each of the views using Insomnia a REST client. The  project was also built using EJS templating which injected the views on the front-end.
+
+The project has three models user, portfolio and picture and covers the CRUD requirement. Each user registered can create, read, update and delete their profiles, comments and pictures.
+
+Created a database for seed files for the database to preload users information existing on the mongo db.
+
+A feature that I would like to highlight is the use of promises and populating virtuals which enabled me to find the picture uploaded by the hairdresser (i.e. user) and save this on their portfolio page. See code below:
+
+```
+userSchema.virtual('pictures', {
+  ref: 'pictures',
+  foreignField: 'creator',
+  localField: '_id'
+  });
+
+function showRoute(req, res){
+  Promise.all([Picture.find(), Portfolio.findById(req.params.id)])
+    .then((values)=> {
+      res.render('portfolios/show', {
+        pictures: values[0],
+        portfolio: values[1]
+      });
+    });
+}
+```
+The main feature of this app was to build a platform where the public can view London hairdressers and be able to use them if they like their work, therefore I felt that including google maps would be a user requirement. <br>
+See below code used to implement this feature,
+I used parseFloat which returns the value up to a point and ignore the character, which in this case would be a decimal point, i.e. returning a string into a number.
+
+```
+function initMap() {
+  const venue = { 'lat': parseFloat($('#map')[0].dataset.lat, 10), 'lng': parseFloat($('#map')[0].dataset.long, 10) };
+  console.log(venue);
+
+  const map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 16,
+    center: venue
+    });
+    new google.maps.Marker({
+      position: venue,
+      map: map
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      if (document.getElementById('map')) initMap();
+      });
+      ```
+
+### What do differently
+As this was my first RESTful application, my wireframes and planning were not as organised as my latest projects. Using Draw.io and Trello would have made the build of the app more streamline, and I would have been able to implement additional features in the 7 day timeframe.
+
+### Wins
+
+I enjoyed building the app and picked up the concept of using the language fairly quickly.
+I have successfully built multiple pages using Bulma and SASS for styling.
+This app has been deployed and is functional to the public and free of errors or incomplete functionality.
+
+Portfolio Index Page
+<p align="center"><img src="https://i.imgur.com/qXWtVpD.png" width="700"/></p>
+
+Portfolio Show page
+<p align="center"><img src="https://i.imgur.com/gcuUSDN.png" width="700"/></p>
+<p align="center"><img src="https://i.imgur.com/hNvx3xa.png" width="700"/></p>
+
+Login Page
+<p align="center"><img src="https://i.imgur.com/Zr4QyfU.png" width="700"/></p>
+
+Register Page
+<p align="center"><img src="https://i.imgur.com/lPTlq6n.png" width="700"/></p>
+
+Picture Index Page
+<p align="center"><img src="https://i.imgur.com/IDUfe5Y.png" width="700"/></p>
+
+Picture Show Page
+<p align="center"><img src="https://i.imgur.com/PnXlsrZ.png" width="700"/></p>
 
 #### planned features
 
 Achieved the main requirements to showcase images for hairstyles however I would like to aim to add additional features including
-- An input field to include the name and email of the person who leaves a comment - currently not active
+- An input field to include the name and email of the person who leaves a comment
+- comments section included on the picture page
+- delete comment route to only be accessible to person that created the comment
 - Star rating system  
-- Google maps as an API
 - Booking system
-- Information on the styles of hair and feature a search button to enable clients to search for what look they would like to achieve.
-<!-- - "add a picture" link to only show up on the hairdressers login page -->
-<!-- - about page -->
-- like and follow
-- search
+- Feature a search function to enable clients to search for what look they would like to achieve.
+- Dropdown options for add new hairstyle section
 change
-make small change for merging into deloyment

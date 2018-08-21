@@ -18,7 +18,6 @@ const portfolioSchema = new mongoose.Schema({
   creator: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
   lat: Number,
   lng: Number,
-  // pictures: [pictureSchema]
   comments: [commentSchema]
 });
 

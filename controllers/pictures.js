@@ -1,6 +1,5 @@
 const Picture = require('../models/picture.js');
 
-
 function indexRoute(req, res){
   Picture
     .find()
