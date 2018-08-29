@@ -17,6 +17,12 @@ Your app must:
 * Have **semantically clean HTML** - you make sure you write HTML that makes structural sense rather than thinking about how it might look, which is the job of CSS.
 * **Be deployed online** and accessible to the public.
 ---
+
+#### Technologies Used
+HTML | SCSS | JavaScript (ES6) | MongoDB | Express | EJS | Node.js | Mongoose
+
+<hr/>
+
 ### Idea
 I decided to build a platform for London hairdressers to showcase their portfolio of work and allow any user to access the app to obtain information about the salon and the hairstylist. This project allowed me to explore my creativity and focus on establishing the fundamentals in building an app.
 
