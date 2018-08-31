@@ -35,7 +35,6 @@
       </ul>
       <br>
       <div id="map" data-lat="<%= portfolio.lat %>" data-long="<%= portfolio.lng %>"></div>
-      <%= portfolio.lat %> <%= portfolio.lng %>
     </div>
   </div>
 </div>
@@ -69,7 +68,7 @@
     <div class="container-comments">
       <p>Post a comment about <%= portfolio.name %></p>
         <form class="sectionComments" action="/portfolios/<%= portfolio.id %>/comment" method="post">
-          <textarea name="content" rows="8" cols="80"></textarea>
+          <textarea name="content" rows="8" cols="50"></textarea>
           <button name="button">Post comment</button>
         </form>
         <article class="media-content">
