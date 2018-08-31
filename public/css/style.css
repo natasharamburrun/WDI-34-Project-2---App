@@ -149,12 +149,11 @@ input[type="checkbox"] {
   margin: 0 auto; }
 
 .section-portfolioIndex {
-  padding-bottom: 800px; }
+  padding-bottom: 50px; }
 
 .card-imageInx img {
   border: none;
   display: inline-block;
-  margin: 20px 20px;
   object-fit: cover; }
 
 .card-image img {
@@ -231,6 +230,16 @@ input[type="checkbox"] {
   background-color: grey;
   margin-top: 50px; }
 
+@media screen and (max-width: 600px) {
+  #map {
+    max-width: 300px;
+    max-height: 250px; } }
+@media screen and (max-width: 600px) {
+  .sectionComments {
+    max-width: 300px; } }
+@media screen and (max-width: 600px) {
+  .textarea {
+    min-width: 300px; } }
 .container-smallImg img {
   width: 200px;
   height: 200px;
@@ -246,10 +255,8 @@ input[type="checkbox"] {
   width: 300px; }
 
 .container-comments {
-  border: 10px; }
-
-.sectionComments {
-  padding-bottom: 200px; }
+  border: 10px;
+  padding: 10px; }
 
 .container-portfolioshow .column {
   margin: 20px; }
@@ -262,8 +269,8 @@ input[type="checkbox"] {
   display: inline-flex; }
 
 .container-hairSection img {
-  height: 500px;
-  width: 500px;
+  min-height: 500px;
+  min-width: 500px;
   object-fit: cover; }
 
 .card-abouthairstyle {
