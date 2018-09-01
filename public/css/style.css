@@ -264,7 +264,8 @@ input[type="checkbox"] {
 .container-hairSection img {
   min-height: 320px;
   min-width: 320px;
-  object-fit: cover; }
+  object-fit: cover;
+  padding: 50px; }
 
 .card-abouthairstyle {
   text-align: center;

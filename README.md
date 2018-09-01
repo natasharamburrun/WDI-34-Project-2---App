@@ -91,9 +91,13 @@ As this was my first RESTful application, my wireframes and planning were not as
 
 ### Wins
 I enjoyed building the app and picked up the concept of using the language fairly quickly.
-I have successfully built multiple pages using Bulma and SASS for styling.
+I have successfully built multiple pages using Bulma and SASS for styling make the app mobile responsive.
 This app has been deployed and is functional to the public and free of errors.
 <!-- or incomplete functionality. -->
+
+<strong>Picture Index Page</strong>: Index page for hairstyles
+<p align="center"><img src="https://i.imgur.com/rlcrkOF.png" width="120"/></p>
+
 
 <hr>
 
@@ -113,8 +117,8 @@ Kept pages clean and straightforward for best user experience.
 <strong>Register Page</strong>: Register page includes a checkbox 'Are you a hairdresser' used to create a new portfolio and a use for a future user client login access.
 <p align="center"><img src="https://i.imgur.com/lPTlq6n.png" width="700"/></p>
 
-<strong>Picture Index Page</strong>: Index page for hairstyles
-<p align="center"><img src="https://i.imgur.com/IDUfe5Y.png" width="700"/></p>
+<!-- <strong>Picture Index Page</strong>: Index page for hairstyles
+<p align="center"><img src="https://i.imgur.com/IDUfe5Y.png" width="700"/></p> -->
 
 <strong>Picture Show Page</strong>: Show page for hairstyle including stylist info and service/ products used
 <p align="center"><img src="https://i.imgur.com/PnXlsrZ.png" width="700"/></p>
