@@ -96,7 +96,7 @@ This app has been deployed and is functional to the public and free of errors.
 <!-- or incomplete functionality. -->
 
 <strong>Picture Index Page</strong>: Index page for hairstyles
-<p align="center"><img src="https://i.imgur.com/rlcrkOF.png" width="120"/></p>
+<p align="center"><img src="https://i.imgur.com/rlcrkOF.png" width="200"/></p>
 
 
 <hr>
