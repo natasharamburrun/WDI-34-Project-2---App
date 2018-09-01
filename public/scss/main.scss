@@ -134,7 +134,7 @@ body { font-family: sans-serif; }
 }
 .container-register{
   background-color: #8d6c65;
-  width: 500px;
+  width: 300px;
   display: flex;
   display:table;
   height:100%;
@@ -142,26 +142,27 @@ body { font-family: sans-serif; }
   0 auto;
 }
 .container-login{
-  width: 500px;
+  width: 300px;
   display: flex;
-  // align-items: center;
-  // justify-content: center;
   display:table;
   height:100%;
   margin:
   0 auto;
   padding-bottom: 500px;
+
 }
+//   @media screen and (min-width: 600px) {
+//   .notification form input{
+//       width: 200px;
+//   }
+// }
+
 
 .notification form {
   display: table-cell;
-  text-align: left;
   vertical-align: middle;
-  align-items: center;
+  padding-bottom: 50px;
   justify-content: center;
-  flex-direction: row;
-  padding: 40px 150px;
-  padding-bottom: 100px;
 }
 
 .notification h2{
@@ -191,6 +192,7 @@ input[type="checkbox"] {
 .notification .field-submit button {
   width: 300px;
 }
+
 
 //******************
 //NEW PORTFOLIO PAGE
@@ -376,20 +378,16 @@ input[type="checkbox"] {
 //PICTURE SHOW PAGE
 //*****************
 
-.container-hairSection {
-  display: inline-flex;
-}
 
 .container-hairSection img {
-  min-height: 500px;
-  // margin: 50px;
-  min-width: 500px;
+  min-height: 320px;
+  min-width: 320px;
   object-fit: cover;
 }
 
 .card-abouthairstyle {
-  min-width: 250px;
-  margin: 50px;
+  text-align: center;
+  min-width: 300px;
   li {
     padding: 10px;
     font-size: 20px;
@@ -397,14 +395,10 @@ input[type="checkbox"] {
 }
 
 .card-aboutstylistsalon {
-  min-width: 250px;
-  margin: 50px;
+  text-align: center;
+  min-width: 300px;
   li {
     padding: 10px;
     font-size: 20px;
   }
-}
-
-.section-admin {
-
 }
