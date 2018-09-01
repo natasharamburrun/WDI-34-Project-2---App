@@ -129,5 +129,5 @@ Kept pages clean and straightforward for best user experience.
 - Search function to enable clients to search for what look they would like to achieve.
 - Dropdown options for add new hairstyle section
 - Booking system
-- Add a model to the delete functions, to stop accident deleting profile or pictures
+- Add a modal to the delete functions, to stop accident deleting profile or pictures
 - Username to automatically be available on add new picture page
